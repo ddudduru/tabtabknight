@@ -6,21 +6,21 @@ using TMPro;
 public class Player_Control : MonoBehaviour
 {
     static public Player_Control instance;
-    
+
     Transform tr;
     Rigidbody rgbd;
     Animator anim;
-    
 
 
-    int isForward=0;
+
+    int isForward = 0;
     public int cur_dir; //
     float cur_acceleration;
     float max_acceleration;
 
     bool isAttack;
     bool isAttackReady;
-    float attackDealy=0.2f;
+    float attackDealy = 0.2f;
 
     bool isHit;
 
@@ -37,7 +37,7 @@ public class Player_Control : MonoBehaviour
     {
         instance = this;
         tr = this.transform;
-       
+
         rgbd = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
 
@@ -47,15 +47,15 @@ public class Player_Control : MonoBehaviour
     void Start()
     {
         cur_dir = 1;
-       
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)|| Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
-            
+
             if (isDizzy)
                 dizzy_amount -= 1f;
             else
@@ -64,7 +64,7 @@ public class Player_Control : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            anim.SetBool("attack_rotate",true);
+            anim.SetBool("attack_rotate", true);
         }
         if (Input.GetKeyDown(KeyCode.W))
         {
@@ -76,17 +76,18 @@ public class Player_Control : MonoBehaviour
         }
         if (cur_dir == 1) anim.SetBool("move_dir", true);
         else anim.SetBool("move_dir", false);
-        cur_acceleration += Time.deltaTime*4f;
+        cur_acceleration += Time.deltaTime * 4f;
         if (cur_acceleration >= max_acceleration) cur_acceleration = max_acceleration;
 
         attackDealy += Time.deltaTime;
-        if (attackDealy >= 0.2f){isAttackReady = true;}
-        else{isAttackReady = false; }
+        if (attackDealy >= 0.2f) { isAttackReady = true; }
+        else { isAttackReady = false; }
 
         if (dizzy_amount > 0f) { isDizzy = true; anim.SetBool("isDizzy", true); }
         else { isDizzy = false; anim.SetBool("isDizzy", isDizzy); }
 
-        if (skill_amount > 0f) {
+        if (skill_amount > 0f)
+        {
             skill_amount -= Time.deltaTime;
             isImmortal = true;
             anim.SetBool("attack_rotate", true);
@@ -102,11 +103,11 @@ public class Player_Control : MonoBehaviour
 
         if (!isDizzy)
         {
-            rgbd.velocity = isForward * (transform.forward*3f) + new Vector3(cur_dir * cur_acceleration, 0f, 0f);
+            rgbd.linearVelocity = isForward * (transform.forward * 3f) + new Vector3(cur_dir * cur_acceleration, 0f, 0f);
         }
         else
         {
-            rgbd.velocity = new Vector3(0f, 0f, GameManager.instance.gameSpd);
+            rgbd.linearVelocity = new Vector3(0f, 0f, GameManager.instance.gameSpd);
         }
 
 
@@ -114,18 +115,18 @@ public class Player_Control : MonoBehaviour
 
 
         RaycastHit hit;
-        if(!isHit&&!isDizzy&&!isImmortal)
-        if (Physics.Raycast(tr.position+new Vector3(0f,1f,0f),tr.forward,out hit, 3)|| Physics.Raycast(tr.position + new Vector3(0f, 1f, 0f), new Vector3(-1f, 0f, 0f), out hit, 3)|| Physics.Raycast(tr.position + new Vector3(0f, 1f, 0f), new Vector3(1f, 0f, 0f), out hit, 3))
-        {
-            if (hit.collider.CompareTag("Enemy"))
+        if (!isHit && !isDizzy && !isImmortal)
+            if (Physics.Raycast(tr.position + new Vector3(0f, 1f, 0f), tr.forward, out hit, 3) || Physics.Raycast(tr.position + new Vector3(0f, 1f, 0f), new Vector3(-1f, 0f, 0f), out hit, 3) || Physics.Raycast(tr.position + new Vector3(0f, 1f, 0f), new Vector3(1f, 0f, 0f), out hit, 3))
             {
-                if (isAttackReady && !isAttack)
+                if (hit.collider.CompareTag("Enemy"))
                 {
-                    StartCoroutine(nameof(DoSlash));
+                    if (isAttackReady && !isAttack)
+                    {
+                        StartCoroutine(nameof(DoSlash));
+                    }
                 }
             }
-        }
-        
+
     }
     public float dizzy_amount;
     public bool isDizzy;
@@ -145,15 +146,15 @@ public class Player_Control : MonoBehaviour
             int getPoint = 50;
             switch (it.type)
             {
-                case 0: // ½ºÅ³
+                case 0: // ï¿½ï¿½Å³
                     skill_amount = 4f;
                     break;
-                case 1: // Æ÷¿öµå
+                case 1: // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                     isForward = 1;
                     Invoke(nameof(ForwardEnd), 3f);
-                    
+
                     break;
-                case 2: // ÄÚÀÎ(Á¡¼ö)
+                case 2: // ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½)
                     getPoint = 150;
                     break;
             }
@@ -170,10 +171,10 @@ public class Player_Control : MonoBehaviour
         if (other.CompareTag("DeadZone"))
         {
             UI_Control.instance.Finish_game();
-            
+
             //
         }
-        
+
     }
     private void OnTriggerStay(Collider other)
     {
@@ -191,29 +192,31 @@ public class Player_Control : MonoBehaviour
 
     private void OnCollisionEnter(Collision col)
     {
-        if (col.collider.CompareTag("Obstacle")&&!isImmortal&& !isHit)
+        if (col.collider.CompareTag("Obstacle") && !isImmortal && !isHit)
         {
-            Obstacls_Control.Type tp = col.gameObject.GetComponent<Obstacls_Control>().type;
+            var obstacls = col.gameObject.GetComponent<Obstacls_Control>();
+            if (obstacls != null)
+            {
+                Obstacls_Control.Type tp = obstacls.type;
+                if (tp == Obstacls_Control.Type.Tree)
+                {
+                    SoundManager.instance.Play_SoundEffect(7);
+                    HitObtacle(0);
+                    obstacls.Despawn();
+                }
+                else if (tp == Obstacls_Control.Type.Log)
+                {
+                    SoundManager.instance.Play_SoundEffect(7);
+                    HitObtacle(1);
+                    obstacls.Despawn();
+                }
+                else
+                {
 
-            if (tp == Obstacls_Control.Type.tree)
-            {
-                SoundManager.instance.Play_SoundEffect(7);
-                HitObtacle(0);
-                Destroy(col.gameObject);
+                }
             }
-            else if (tp == Obstacls_Control.Type.log)
-            {
-                SoundManager.instance.Play_SoundEffect(7);
-                HitObtacle(1);
-                Destroy(col.gameObject);
-            }
-            else
-            {
-                
-            }
-            
         }
-        
+
     }
     void HitFalse()
     {
@@ -222,7 +225,7 @@ public class Player_Control : MonoBehaviour
     public void HitObtacle(int type)
     {
 
-        
+
         isHit = true;
         skill_amount = 0;
         Invoke(nameof(HitFalse), 0.1f);
@@ -241,8 +244,8 @@ public class Player_Control : MonoBehaviour
                 dizzy_amount += 5f;
                 break;
         }
-        
-        
+
+
     }
     IEnumerator DoSlash()
     {
@@ -255,7 +258,7 @@ public class Player_Control : MonoBehaviour
         //attack_effect.enabled = true;
         SoundManager.instance.Play_SoundEffect(0);
         yield return new WaitForSeconds(0.05f);
-        
+
         attack_range.enabled = true;
         yield return new WaitForSeconds(0.1f);
         attack_range.enabled = false;
@@ -264,5 +267,5 @@ public class Player_Control : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         isAttack = false;
     }
-    
+
 }

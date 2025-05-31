@@ -1,60 +1,135 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using TMPro;
 
 public class Obstacls_Control : MonoBehaviour
 {
-    public enum Type { tree,rock,log};
+    public enum Type { Tree, Rock, Log }
     public Type type;
 
-    public GameObject score_up_txt;
+    [Header("풀링에서 복귀할 때 호출할 콜백")]
+    public Action OnDespawn;
+
+    [Header("점수 표시 프리팹(자식으로 생성 후 1초 뒤 파괴)")]
+    public GameObject scoreUpText;
+
+    [Header("Log 타입일 때 추가로 더 빠르게 이동시킬 속도(맵 속도의 몇 배)")]
+    public float logExtraSpeedMultiplier = 1.2f;
+    // 예: 1.2f면, 기본 gameSpd * 1.2 속도로 이동
+
+    /// <summary>
+    /// 맵 파트 내부에서 로컬 X 위치와 회전을 랜덤 설정해 줍니다.
+    /// </summary>
     public void Setting_Random()
     {
-        float rand_x = Random.Range(-40f, -10f);
-        float rand_y = Random.Range(0f,360f);
-        transform.localPosition = new Vector3(rand_x, transform.localPosition.y, transform.localPosition.z);
-        transform.localRotation = Quaternion.Euler(new Vector3(0f, rand_y, 0f));
+        transform.localPosition = new Vector3(
+            UnityEngine.Random.Range(-40f, -10f),
+            transform.localPosition.y,
+            transform.localPosition.z
+        );
+        transform.localRotation = Quaternion.Euler(
+            0f,
+            UnityEngine.Random.Range(0f, 360f),
+            0f
+        );
     }
+
     private void Update()
     {
-        if (type == Type.log)
+        // 기본적으로 장애물은 MapController가 자식 오브젝트를 
+        // Translate(Vector3.forward * gameSpd) 해 주면 따라 움직입니다.
+        // 단, Log 타입만 추가 속도를 더해 줍니다.
+        if (type == Type.Log)
         {
-            transform.position += new Vector3(0f, 0f, GameManager.instance.gameSpd)*1.2f * Time.deltaTime;
-        }
-        if (type == Type.rock)
-        {
-            transform.position += new Vector3(0f, 0f, GameManager.instance.gameSpd) * Time.deltaTime;
+            float extraSpeed = GameManager.instance.gameSpd * (logExtraSpeedMultiplier - 1f);
+            transform.Translate(Vector3.forward * extraSpeed * Time.deltaTime, Space.World);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player_Attack_Skill")&&type==Type.tree)
+        // 1) 플레이어 스킬에 맞았을 때 -> 풀링으로 복귀
+        if (other.CompareTag("Player_Attack_Skill"))
         {
-            GameManager.instance.PointUp(50);
-            SoundManager.instance.Play_SoundEffect(2);
-            GameObject so = Instantiate(score_up_txt, transform.position + new Vector3(0f, 4f, 0f), Quaternion.Euler(new Vector3(50f, 0f, 0f)));
-            so.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = "" + 50;
-            Destroy(so, 1f);
-            Destroy(this.gameObject);
-        }
+            int score = 0;
+            int soundType = -1;
 
-        if (other.CompareTag("Player_Attack_Skill") && type == Type.rock)
-        {
-            GameManager.instance.PointUp(200);
-            SoundManager.instance.Play_SoundEffect(4);
-            SoundManager.instance.Play_SoundEffect(5);
-            Player_Control.instance.HitObtacle(2);
-            GameObject so = Instantiate(score_up_txt, transform.position + new Vector3(0f, 4f, 0f), Quaternion.Euler(new Vector3(50f, 0f, 0f)));
-            so.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = "" + 200;
-            Destroy(so, 1f);
-            Destroy(this.gameObject);
-        }
+            // Tree일 때 50점, Rock일 때 200점, Log는 점수 없음(0)
+            switch (type)
+            {
+                case Type.Tree:
+                    score = 50;
+                    soundType = 2; // 나무 맞는 소리
+                    break;
+                case Type.Rock:
+                    score = 200;
+                    soundType = 4; // 바위 맞는 소리
+                    break;
+                case Type.Log:
+                    // Log는 맞아도 점수 없음(너가 원하면 점수 추가)
+                    score = 0;
+                    soundType = 4; // 바위/통나무 맞는 소리(예시)
+                    break;
+            }
 
-        if (other.CompareTag("DeadZoneETC")&&(type==Type.log|| type == Type.rock))
-        {
-            Destroy(this.gameObject);
+            // 점수 적용
+            if (score > 0)
+            {
+                GameManager.instance.PointUp(score);
+            }
+
+            // 사운드 재생
+            if (soundType >= 0)
+            {
+                SoundManager.instance.Play_SoundEffect(soundType);
+            }
+
+            // 화면에 점수 텍스트 보여 주기 (Tree, Rock만 의미)
+            if (score > 0 && scoreUpText != null)
+            {
+                ShowScore(score);
+            }
+
+            // 풀링 회수
+            Despawn();
         }
+        // 2) DeadZone에 들어갔을 때 -> 풀링으로 복귀
+        else if (other.CompareTag("DeadZoneETC"))
+        {
+            Despawn();
+        }
+    }
+
+    /// <summary>
+    /// 점수 표시용 프리팹을 화면에 띄우고 1초 뒤 파괴합니다.
+    /// </summary>
+    private void ShowScore(int amount)
+    {
+        if (scoreUpText == null) return;
+
+        GameObject so = Instantiate(
+            scoreUpText,
+            transform.position + Vector3.up * 4f,
+            Quaternion.Euler(50f, 0f, 0f)
+        );
+        var textComp = so.transform
+                         .GetChild(0)
+                         .GetChild(0)
+                         .GetComponent<TextMeshProUGUI>();
+        if (textComp != null)
+        {
+            textComp.text = amount.ToString();
+        }
+        Destroy(so, 1f);
+    }
+
+    /// <summary>
+    /// OnDespawn 콜백을 호출해 풀링 매니저가 이 오브젝트를 회수하도록 합니다.
+    /// </summary>
+    public void Despawn()
+    {
+        // 중복 호출 방지를 위해 한번만 호출
+        OnDespawn?.Invoke();
+        OnDespawn = null;
     }
 }

@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public float score;
 
     public int gameLevel = 1;
-    
+
     private void Awake()
     {
         instance = this;
@@ -44,7 +44,6 @@ public class GameManager : MonoBehaviour
             gameLevel += 1;
             gameSpd += 1f;
             UI_Control.instance.PopUp_Level();
-            Map_Control.instance.tree_amount += 5;
         }
     }
     IEnumerator Point_UP()

@@ -1,36 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject enemy_slime;
+    [SerializeField] private Enemy enemyPrefab;
+    [SerializeField] private int poolSize = 20;
+    [SerializeField] private float spawnInterval = 5f;
 
-    void Start()
+    private ObjectPool<Enemy> enemyPool;
+    private int spawnAmount;
+
+    private void Start()
     {
-        StartCoroutine(Spawn(0, 5+5*GameManager.instance.gameLevel));
+        enemyPool = new ObjectPool<Enemy>(enemyPrefab, poolSize, transform);
+        spawnAmount = 5 + 5 * GameManager.instance.gameLevel;
+        InvokeRepeating(nameof(SpawnEnemies), spawnInterval, spawnInterval);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void SpawnEnemies()
     {
-        
-    }
-    IEnumerator Spawn(int type,int amount)
-    {
-        while (true)
+        for (int i = 0; i < spawnAmount; i++)
         {
-            if (type == 0)
-            {// ½½¶óÀÓ
-                for (int i = 0; i < amount; i++)
-                {
-                    GameObject slime_obj = Instantiate(enemy_slime, transform.position, transform.rotation);
-                    float rand_x = Random.Range(-9f, 5f);
-                    float rand_z = Random.Range(-35f, -20f);
-                    slime_obj.transform.position = new Vector3(rand_x, slime_obj.transform.position.y, rand_z);
-                }
-            }
-            yield return new WaitForSeconds(5f);
+            Vector3 pos = transform.position;
+            pos.x = UnityEngine.Random.Range(-9f, 5f);
+            pos.z = UnityEngine.Random.Range(-35f, -20f);
+            Enemy e = enemyPool.Pop(pos, transform.rotation);
+            e.OnReturnToPool += () => enemyPool.Push(e);
         }
     }
 }
