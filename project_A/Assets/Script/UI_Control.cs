@@ -35,7 +35,7 @@ public class UI_Control : MonoBehaviour
         if (player_data.isDizzy)
         {
             dizzy_go.SetActive(true);
-            dizzy_text.text = ""+player_data.dizzy_amount;
+            dizzy_text.text = "" + player_data.dizzy_amount;
         }
         else
         {
@@ -44,7 +44,7 @@ public class UI_Control : MonoBehaviour
         if (player_data.isImmortal)
         {
             skill_go.SetActive(true);
-            skill_time_img.fillAmount = player_data.skill_amount/4f;
+            skill_time_img.fillAmount = player_data.skill_amount / 4f;
         }
         else
         {
@@ -55,14 +55,14 @@ public class UI_Control : MonoBehaviour
     }
     public void Play_game()
     {
-        SoundManager.instance.Play_SoundEffect(6);
+        SoundManager.instance.Play_SoundEffect(SoundManager.SoundType.Effect_Button_Click);
         Option_panel.SetActive(false);
         Time.timeScale = 1f;
 
     }
     public void Finish_game()
     {
-        SoundManager.instance.Play_SoundEffect(6);
+        SoundManager.instance.Play_SoundEffect(SoundManager.SoundType.Effect_Button_Click);
         Time.timeScale = 0f;
         Finish_panel.SetActive(true);
         finishScore_text.text = score_text.text;
@@ -71,29 +71,30 @@ public class UI_Control : MonoBehaviour
     }
     public void Go_Home()
     {
-        SoundManager.instance.Play_SoundEffect(6);
+        SoundManager.instance.Play_SoundEffect(SoundManager.SoundType.Effect_Button_Click);
         Time.timeScale = 1f;
         LoadScene_Control.LoadScene("StartScene");
     }
     public void Restart_game()
     {
-        SoundManager.instance.Play_SoundEffect(6);
+        SoundManager.instance.Play_SoundEffect(SoundManager.SoundType.Effect_Button_Click);
         Time.timeScale = 1f;
         LoadScene_Control.LoadScene("GameScene");
     }
-    public void Quit_game() {
+    public void Quit_game()
+    {
         Application.Quit();
     }
     public void Click_Option()
     {
-        SoundManager.instance.Play_SoundEffect(6);
+        SoundManager.instance.Play_SoundEffect(SoundManager.SoundType.Effect_Button_Click);
         Option_panel.SetActive(true);
         Time.timeScale = 0f;
     }
     public void PopUp_Level()
     {
         gameLv_text.transform.parent.GetComponent<Animator>().SetTrigger("doSlide");
-        gameLv_text.text = ""+GameManager.instance.gameLevel;
+        gameLv_text.text = "" + GameManager.instance.gameLevel;
     }
-    
+
 }

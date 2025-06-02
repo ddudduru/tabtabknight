@@ -26,11 +26,11 @@ public class ItemSpanwer : MonoBehaviour
     }
     void Spawn()
     {
-        for (int i = 0; i < 3+(GameManager.instance.gameLevel); i++)
+        for (int i = 0; i < 3 + (GameManager.instance.gameLevel); i++)
         {
             GameObject item_obj = Instantiate(item_, transform.position, transform.rotation);
             int rand_type = Random.Range(0, 3);
-            item_obj.GetComponent<Item>().type = rand_type;
+            item_obj.GetComponent<Item>().type = (ItemType)rand_type;
             for (int a = 0; a < 3; a++)
             {
                 if (a == rand_type)
@@ -47,5 +47,5 @@ public class ItemSpanwer : MonoBehaviour
             item_obj.transform.position = new Vector3(rand_x, item_obj.transform.position.y, rand_z);
         }
     }
-    
+
 }

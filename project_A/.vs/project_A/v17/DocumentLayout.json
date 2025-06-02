@@ -3,52 +3,72 @@
   "WorkspaceRootPath": "D:\\Unity\\Project\\tabtabknight\\project_A\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|D:\\Unity\\Project\\tabtabknight\\project_A\\assets\\script\\map\\mapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\map\\mapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|D:\\Unity\\Project\\tabtabknight\\project_A\\assets\\script\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|d:\\unity\\project\\tabtabknight\\project_a\\assets\\script\\obstaclepoolmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\obstaclepoolmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|D:\\Unity\\Project\\tabtabknight\\project_A\\assets\\script\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|D:\\Unity\\Project\\tabtabknight\\project_A\\assets\\script\\obstacls_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\obstacls_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|D:\\Unity\\Project\\tabtabknight\\project_A\\assets\\script\\map\\mapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\map\\mapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|D:\\Unity\\Project\\tabtabknight\\project_A\\assets\\script\\obstaclepoolmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\obstaclepoolmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|D:\\Unity\\Project\\tabtabknight\\project_A\\assets\\script\\player_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|D:\\Unity\\Project\\tabtabknight\\project_A\\assets\\script\\itempoolmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\itempoolmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|d:\\unity\\project\\tabtabknight\\project_a\\assets\\script\\enemypoolmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\enemypoolmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|D:\\Unity\\Project\\tabtabknight\\project_A\\assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|D:\\Unity\\Project\\tabtabknight\\project_A\\assets\\script\\enemyspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\enemyspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|D:\\Unity\\Project\\tabtabknight\\project_A\\assets\\script\\soundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\soundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|D:\\Unity\\Project\\tabtabknight\\project_A\\assets\\script\\constdata\\constdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\constdata\\constdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|D:\\Unity\\Project\\tabtabknight\\project_A\\assets\\script\\map\\combinedmapdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\map\\combinedmapdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{915C7A56-98AD-326E-4D83-64FBEB5C356A}|Assembly-CSharp-Editor.csproj|D:\\Unity\\Project\\tabtabknight\\project_A\\assets\\editor\\combinedmapeditorwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{915C7A56-98AD-326E-4D83-64FBEB5C356A}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\editor\\combinedmapeditorwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|D:\\Unity\\Project\\tabtabknight\\project_A\\assets\\script\\itemspanwer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\itemspanwer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|D:\\Unity\\Project\\tabtabknight\\project_A\\assets\\script\\player_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|D:\\Unity\\Project\\tabtabknight\\project_A\\assets\\script\\objectpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\objectpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|D:\\Unity\\Project\\tabtabknight\\project_A\\assets\\script\\map\\obstacleloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\map\\obstacleloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|D:\\Unity\\Project\\tabtabknight\\project_A\\assets\\script\\ui_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\ui_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|D:\\Unity\\Project\\tabtabknight\\project_A\\assets\\script\\map_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\map_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{915C7A56-98AD-326E-4D83-64FBEB5C356A}|Assembly-CSharp-Editor.csproj|D:\\Unity\\Project\\tabtabknight\\project_A\\assets\\editor\\obstaclemapeditorwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{915C7A56-98AD-326E-4D83-64FBEB5C356A}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\editor\\obstaclemapeditorwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|D:\\Unity\\Project\\tabtabknight\\project_A\\assets\\script\\map\\obstaclemapdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\map\\obstaclemapdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,17 +78,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Enemy.cs",
               "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Enemy.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Enemy.cs",
               "ToolTip": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Enemy.cs",
               "RelativeToolTip": "Assets\\Script\\Enemy.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAApAAAA",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAQwGkAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T11:14:44.478Z",
               "IsPinned": true,
@@ -76,134 +96,196 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "Obstacls_Control.cs",
+              "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Obstacls_Control.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Obstacls_Control.cs",
+              "ToolTip": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Obstacls_Control.cs",
+              "RelativeToolTip": "Assets\\Script\\Obstacls_Control.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T11:30:50.158Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Player_Control.cs",
+              "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Player_Control.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Player_Control.cs",
+              "ToolTip": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Player_Control.cs",
+              "RelativeToolTip": "Assets\\Script\\Player_Control.cs",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAswGIAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T12:29:20.68Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MapController.cs",
+              "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Map\\MapController.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Map\\MapController.cs",
+              "ToolTip": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Map\\MapController.cs",
+              "RelativeToolTip": "Assets\\Script\\Map\\MapController.cs",
+              "ViewState": "AQIAAGQAAAAAAAAAAAAgwHwAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T14:49:54.603Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EnemyPoolManager.cs",
+              "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\EnemyPoolManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\EnemyPoolManager.cs",
+              "ToolTip": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\EnemyPoolManager.cs",
+              "RelativeToolTip": "Assets\\Script\\EnemyPoolManager.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAgwGMAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T07:43:25.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CombinedMapData.cs",
+              "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Map\\CombinedMapData.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Map\\CombinedMapData.cs",
+              "ToolTip": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Map\\CombinedMapData.cs",
+              "RelativeToolTip": "Assets\\Script\\Map\\CombinedMapData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T07:02:07.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CombinedMapEditorWindow.cs",
+              "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Editor\\CombinedMapEditorWindow.cs",
+              "RelativeDocumentMoniker": "Assets\\Editor\\CombinedMapEditorWindow.cs",
+              "ToolTip": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Editor\\CombinedMapEditorWindow.cs",
+              "RelativeToolTip": "Assets\\Editor\\CombinedMapEditorWindow.cs",
+              "ViewState": "AQIAAAgBAAAAAAAAAAAAAB4BAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T07:04:00.568Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ObstaclePoolManager.cs",
               "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\ObstaclePoolManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\ObstaclePoolManager.cs",
               "ToolTip": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\ObstaclePoolManager.cs",
               "RelativeToolTip": "Assets\\Script\\ObstaclePoolManager.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAIwFIAAAAJAAAA",
+              "ViewState": "AQIAADIAAAAAAAAAAAAIwFcAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-31T17:36:06.125Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MapController.cs",
-              "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Map\\MapController.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Map\\MapController.cs",
-              "ToolTip": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Map\\MapController.cs",
-              "RelativeToolTip": "Assets\\Script\\Map\\MapController.cs",
-              "ViewState": "AQIAAGYAAAAAAAAAAAAAAHAAAAArAAAA",
+              "DocumentIndex": 9,
+              "Title": "ConstData.cs",
+              "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\ConstData\\ConstData.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\ConstData\\ConstData.cs",
+              "ToolTip": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\ConstData\\ConstData.cs",
+              "RelativeToolTip": "Assets\\Script\\ConstData\\ConstData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAwAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T14:49:54.603Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T06:35:34.336Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ObstacleMapEditorWindow.cs",
-              "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Editor\\ObstacleMapEditorWindow.cs",
-              "RelativeDocumentMoniker": "Assets\\Editor\\ObstacleMapEditorWindow.cs",
-              "ToolTip": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Editor\\ObstacleMapEditorWindow.cs",
-              "RelativeToolTip": "Assets\\Editor\\ObstacleMapEditorWindow.cs",
-              "ViewState": "AQIAAE8AAAAAAAAAAAAuwFUAAAAAAAAA",
+              "DocumentIndex": 8,
+              "Title": "SoundManager.cs",
+              "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\SoundManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\SoundManager.cs",
+              "ToolTip": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\SoundManager.cs",
+              "RelativeToolTip": "Assets\\Script\\SoundManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T14:36:20.79Z"
+              "WhenOpened": "2025-06-01T06:02:09.588Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Obstacls_Control.cs",
-              "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Obstacls_Control.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Obstacls_Control.cs",
-              "ToolTip": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Obstacls_Control.cs",
-              "RelativeToolTip": "Assets\\Script\\Obstacls_Control.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIMAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T11:30:50.158Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EnemySpawner.cs",
-              "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\EnemySpawner.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\EnemySpawner.cs",
-              "ToolTip": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\EnemySpawner.cs",
-              "RelativeToolTip": "Assets\\Script\\EnemySpawner.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T11:10:00.862Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "GameManager.cs",
               "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\GameManager.cs",
               "ToolTip": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\GameManager.cs",
               "RelativeToolTip": "Assets\\Script\\GameManager.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAQwB8AAAAdAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T11:03:45.534Z",
+              "WhenOpened": "2025-05-23T11:03:45.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Item.cs",
+              "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Item.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Item.cs",
+              "ToolTip": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Item.cs",
+              "RelativeToolTip": "Assets\\Script\\Item.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T06:40:22.897Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Player_Control.cs",
-              "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Player_Control.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Player_Control.cs",
-              "ToolTip": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Player_Control.cs",
-              "RelativeToolTip": "Assets\\Script\\Player_Control.cs",
-              "ViewState": "AQIAAL8AAAAAAAAAAAAUwMoAAAA+AAAA",
+              "DocumentIndex": 5,
+              "Title": "ItemPoolManager.cs",
+              "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\ItemPoolManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\ItemPoolManager.cs",
+              "ToolTip": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\ItemPoolManager.cs",
+              "RelativeToolTip": "Assets\\Script\\ItemPoolManager.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAxwBIAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T12:29:20.68Z",
+              "WhenOpened": "2025-06-02T06:40:11.888Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ObstacleLoader.cs",
-              "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Map\\ObstacleLoader.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Map\\ObstacleLoader.cs",
-              "ToolTip": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Map\\ObstacleLoader.cs",
-              "RelativeToolTip": "Assets\\Script\\Map\\ObstacleLoader.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAYAAAA",
+              "DocumentIndex": 12,
+              "Title": "ItemSpanwer.cs",
+              "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\ItemSpanwer.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\ItemSpanwer.cs",
+              "ToolTip": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\ItemSpanwer.cs",
+              "RelativeToolTip": "Assets\\Script\\ItemSpanwer.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAIwDAAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T14:38:28.777Z"
+              "WhenOpened": "2025-06-02T06:48:01.189Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
+              "Title": "UI_Control.cs",
+              "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\UI_Control.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\UI_Control.cs",
+              "ToolTip": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\UI_Control.cs",
+              "RelativeToolTip": "Assets\\Script\\UI_Control.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T06:11:18.031Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "ObjectPool.cs",
               "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\ObjectPool.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\ObjectPool.cs",
               "ToolTip": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\ObjectPool.cs",
               "RelativeToolTip": "Assets\\Script\\ObjectPool.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAyAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAgwBgAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T11:09:22.75Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-23T11:09:22.75Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ObstacleMapData.cs",
-              "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Map\\ObstacleMapData.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Map\\ObstacleMapData.cs",
-              "ToolTip": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Map\\ObstacleMapData.cs",
-              "RelativeToolTip": "Assets\\Script\\Map\\ObstacleMapData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T14:37:09.589Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "Map_Control.cs",
               "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Map_Control.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Map_Control.cs",

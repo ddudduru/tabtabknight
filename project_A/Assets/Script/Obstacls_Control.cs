@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using TMPro;
+using static SoundManager;
 
 public class Obstacls_Control : MonoBehaviour
 {
@@ -49,33 +50,30 @@ public class Obstacls_Control : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // 1) 플레이어 스킬에 맞았을 때 -> 풀링으로 복귀
-        if (other.CompareTag("Player_Attack_Skill"))
+        if (other.CompareTag(ConstData.AttackSkillTag))
         {
             int score = 0;
-            int soundType = -1;
+            SoundType soundType = SoundType.None;
 
+            bool isRemove = true;
             // Tree일 때 50점, Rock일 때 200점, Log는 점수 없음(0)
             switch (type)
             {
                 case Type.Tree:
                     score = 50;
-                    soundType = 2; // 나무 맞는 소리
+                    soundType = SoundType.Sword_Slash_Hit_Wood; // 나무 맞는 소리
                     break;
                 case Type.Rock:
                     score = 200;
-                    soundType = 4; // 바위 맞는 소리
+                    soundType = SoundType.Sword_Slash_Hit_Rock; // 바위 맞는 소리
+                    Player_Control.instance.HitObtacle(type);
                     break;
                 case Type.Log:
                     // Log는 맞아도 점수 없음(너가 원하면 점수 추가)
                     score = 0;
-                    soundType = 4; // 바위/통나무 맞는 소리(예시)
+                    soundType = SoundType.Sword_Slash_Hit_Rock; // 바위/통나무 맞는 소리(예시)
+                    isRemove = false;
                     break;
-            }
-
-            // 점수 적용
-            if (score > 0)
-            {
-                GameManager.instance.PointUp(score);
             }
 
             // 사운드 재생
@@ -85,16 +83,43 @@ public class Obstacls_Control : MonoBehaviour
             }
 
             // 화면에 점수 텍스트 보여 주기 (Tree, Rock만 의미)
-            if (score > 0 && scoreUpText != null)
+            if (score > 0)
             {
+                GameManager.instance.PointUp(score);
                 ShowScore(score);
             }
 
-            // 풀링 회수
-            Despawn();
+            if (isRemove)
+            {
+                // 풀링 회수
+                Despawn();
+            }
+        }
+        else if (other.CompareTag(ConstData.PlayerTag))
+        {
+            if (!Player_Control.instance.isImmortal && !Player_Control.instance.isHit)
+            {
+                switch (type)
+                {
+                    case Type.Tree:
+                    case Type.Log:
+                        {
+                            SoundManager.instance.Play_SoundEffect(SoundType.Hit_Player);
+                            Player_Control.instance.HitObtacle(type);
+                            Despawn();
+                        }
+                        break;
+                    case Type.Rock:
+                        {
+
+                        }
+                        break;
+
+                }
+            }
         }
         // 2) DeadZone에 들어갔을 때 -> 풀링으로 복귀
-        else if (other.CompareTag("DeadZoneETC"))
+        else if (other.CompareTag(ConstData.DeadZoneETCTag))
         {
             Despawn();
         }

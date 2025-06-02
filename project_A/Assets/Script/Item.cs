@@ -1,24 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
+// ---------------------------------------------------
+// Item.cs
+// ---------------------------------------------------
+using System;
 using UnityEngine;
 
+// 기존에는 int type과 Destroy만 사용했으나,
+// 풀링을 위해 OnDespawn 콜백과 Despawn() 메서드를 추가했습니다.
 public class Item : MonoBehaviour
 {
-    public int type;
-    // type 0 : 스킬, // type 1 : 포워드 // type 2 : 체력회복
+    public ItemType type;
 
-
-    void Update()
-    {
-        transform.position += new Vector3(0f, 0f, GameManager.instance.gameSpd) * Time.deltaTime;
-    }
+    // 풀로 복귀할 때 호출되는 콜백
+    public Action OnDespawn;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("DeadZoneETC"))
+        // DeadZoneETC에 닿으면 풀로 복귀
+        if (other.CompareTag(ConstData.DeadZoneETCTag))
         {
-            Destroy(this.gameObject);
+            Despawn();
         }
     }
 
+    /// <summary>
+    /// OnDespawn 콜백을 호출하여 풀로 복귀시킵니다.
+    /// </summary>
+    public void Despawn()
+    {
+        OnDespawn?.Invoke();
+        OnDespawn = null;
+    }
 }

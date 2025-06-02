@@ -22,8 +22,7 @@ public class Player_Control : MonoBehaviour
     bool isAttackReady;
     float attackDealy = 0.2f;
 
-    bool isHit;
-
+    public bool isHit;
     public bool isImmortal;//isSkill;
     public float skill_amount;
     public BoxCollider attack_range;
@@ -118,7 +117,7 @@ public class Player_Control : MonoBehaviour
         if (!isHit && !isDizzy && !isImmortal)
             if (Physics.Raycast(tr.position + new Vector3(0f, 1f, 0f), tr.forward, out hit, 3) || Physics.Raycast(tr.position + new Vector3(0f, 1f, 0f), new Vector3(-1f, 0f, 0f), out hit, 3) || Physics.Raycast(tr.position + new Vector3(0f, 1f, 0f), new Vector3(1f, 0f, 0f), out hit, 3))
             {
-                if (hit.collider.CompareTag("Enemy"))
+                if (hit.collider.CompareTag(ConstData.EnemyTag))
                 {
                     if (isAttackReady && !isAttack)
                     {
@@ -142,43 +141,51 @@ public class Player_Control : MonoBehaviour
     {
         if (other.CompareTag("Item"))
         {
-            Item it = other.GetComponent<Item>();
-            int getPoint = 50;
-            switch (it.type)
+            if (other.TryGetComponent<Item>(out var itemComp))
             {
-                case 0: // ��ų
-                    skill_amount = 4f;
-                    break;
-                case 1: // ������
-                    isForward = 1;
-                    Invoke(nameof(ForwardEnd), 3f);
+                int getPoint = 50;
+                switch (itemComp.type)
+                {
+                    case ItemType.Skill:    // 스킬 아이템
+                        skill_amount = 4f;
+                        break;
 
-                    break;
-                case 2: // ����(����)
-                    getPoint = 150;
-                    break;
+                    case ItemType.Forward:  // 포워드 아이템
+                        isForward = 1;
+                        Invoke(nameof(ForwardEnd), 3f);
+                        break;
+
+                    case ItemType.Coin:   // 체력 회복 아이템
+                        getPoint = 150;
+                        break;
+                }
+
+                SoundManager.instance.Play_SoundEffect(SoundManager.SoundType.Effect_Item_Get);
+
+                // 점수 텍스트 생성
+                GameObject so = Instantiate(
+                    score_up_txt,
+                    transform.position + new Vector3(0f, 4f, 0f),
+                    Quaternion.Euler(50f, 0f, 0f)
+                );
+                so.transform.GetChild(0)
+                  .GetChild(0)
+                  .GetComponent<TextMeshProUGUI>()
+                  .text = "" + getPoint;
+                Destroy(so, 1f);
+
+                // 아이템 풀링으로 반환
+                itemComp.Despawn();
             }
-            SoundManager.instance.Play_SoundEffect(3);
-
-
-            GameObject so = Instantiate(score_up_txt, transform.position + new Vector3(0f, 4f, 0f), Quaternion.Euler(new Vector3(50f, 0f, 0f)));
-            so.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = "" + getPoint;
-            Destroy(so, 1f);
-
-            Destroy(other.gameObject);
-
         }
-        if (other.CompareTag("DeadZone"))
+        else if (other.CompareTag("DeadZone"))
         {
             UI_Control.instance.Finish_game();
-
-            //
         }
-
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("CannotGoZone"))
+        if (other.CompareTag(ConstData.CannotGoZoneTag))
         {
             isForward = 0;
         }
@@ -190,42 +197,12 @@ public class Player_Control : MonoBehaviour
         isForward = 0;
     }
 
-    private void OnCollisionEnter(Collision col)
-    {
-        if (col.collider.CompareTag("Obstacle") && !isImmortal && !isHit)
-        {
-            var obstacls = col.gameObject.GetComponent<Obstacls_Control>();
-            if (obstacls != null)
-            {
-                Obstacls_Control.Type tp = obstacls.type;
-                if (tp == Obstacls_Control.Type.Tree)
-                {
-                    SoundManager.instance.Play_SoundEffect(7);
-                    HitObtacle(0);
-                    obstacls.Despawn();
-                }
-                else if (tp == Obstacls_Control.Type.Log)
-                {
-                    SoundManager.instance.Play_SoundEffect(7);
-                    HitObtacle(1);
-                    obstacls.Despawn();
-                }
-                else
-                {
-
-                }
-            }
-        }
-
-    }
     void HitFalse()
     {
         isHit = false;
     }
-    public void HitObtacle(int type)
+    public void HitObtacle(Obstacls_Control.Type type)
     {
-
-
         isHit = true;
         skill_amount = 0;
         Invoke(nameof(HitFalse), 0.1f);
@@ -234,13 +211,13 @@ public class Player_Control : MonoBehaviour
 
         switch (type)
         {
-            case 0: // tree
+            case Obstacls_Control.Type.Tree: // tree
                 dizzy_amount += 3f;
                 break;
-            case 1: // log
+            case Obstacls_Control.Type.Log: // log
                 dizzy_amount += 7f;
                 break;
-            case 2: // rock
+            case Obstacls_Control.Type.Rock: // rock
                 dizzy_amount += 5f;
                 break;
         }
