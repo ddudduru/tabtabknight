@@ -84,7 +84,7 @@ public enum ItemType
 public enum MonsterType
 {
     None,        // 배치되지 않음
-    Goblin,      // 고블린
+    Ghost,      // 고스트 (돌진형)
     Skeleton,    // 스켈레톤
     Bat,         // 박쥐
     Slime,       // 슬라임 (새로 추가)

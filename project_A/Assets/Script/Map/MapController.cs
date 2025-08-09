@@ -238,7 +238,7 @@ public class MapController : MonoBehaviour
                     if (mType == MonsterType.Random)
                     {
                         int rM = Random.Range(0, 4);
-                        mType = (rM == 0) ? MonsterType.Goblin :
+                        mType = (rM == 0) ? MonsterType.Ghost :
                                 (rM == 1) ? MonsterType.Skeleton :
                                 (rM == 2) ? MonsterType.Bat :
                                             MonsterType.Slime;

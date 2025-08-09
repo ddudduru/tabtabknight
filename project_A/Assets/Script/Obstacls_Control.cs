@@ -47,75 +47,72 @@ public class Obstacls_Control : MonoBehaviour
         }
     }
 
+    public void HitObstacle()
+    {
+        int score = 0;
+        SoundType soundType = SoundType.None;
+
+        bool isRemove = true;
+        // Tree일 때 50점, Rock일 때 200점, Log는 점수 없음(0)
+        switch (type)
+        {
+            case Type.Tree:
+                score = 50;
+                soundType = SoundType.Sword_Slash_Hit_Wood; // 나무 맞는 소리
+                break;
+            case Type.Rock:
+                score = 200;
+                soundType = SoundType.Sword_Slash_Hit_Rock; // 바위 맞는 소리
+                Player_Control.Instance.HitObstacle(type);
+                break;
+            case Type.Log:
+                // Log는 맞아도 점수 없음(너가 원하면 점수 추가)
+                score = 0;
+                soundType = SoundType.Sword_Slash_Hit_Rock; // 바위/통나무 맞는 소리(예시)
+                isRemove = false;
+                break;
+        }
+
+        // 사운드 재생
+        if (soundType >= 0)
+        {
+            SoundManager.instance.Play_SoundEffect(soundType);
+        }
+
+        // 화면에 점수 텍스트 보여 주기 (Tree, Rock만 의미)
+        if (score > 0)
+        {
+            GameManager.instance.PointUp(score);
+            ShowScore(score);
+        }
+
+        if (isRemove)
+        {
+            // 풀링 회수
+            Despawn();
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        // 1) 플레이어 스킬에 맞았을 때 -> 풀링으로 복귀
-        if (other.CompareTag(ConstData.AttackSkillTag))
+        if (other.CompareTag(ConstData.PlayerTag))
         {
-            int score = 0;
-            SoundType soundType = SoundType.None;
-
-            bool isRemove = true;
-            // Tree일 때 50점, Rock일 때 200점, Log는 점수 없음(0)
             switch (type)
             {
                 case Type.Tree:
-                    score = 50;
-                    soundType = SoundType.Sword_Slash_Hit_Wood; // 나무 맞는 소리
+                case Type.Log:
+                    {
+                        SoundManager.instance.Play_SoundEffect(SoundType.Hit_Player);
+                        Player_Control.Instance.HitObstacle(type);
+                        Despawn();
+                    }
                     break;
                 case Type.Rock:
-                    score = 200;
-                    soundType = SoundType.Sword_Slash_Hit_Rock; // 바위 맞는 소리
-                    Player_Control.instance.HitObtacle(type);
+                    {
+
+                    }
                     break;
-                case Type.Log:
-                    // Log는 맞아도 점수 없음(너가 원하면 점수 추가)
-                    score = 0;
-                    soundType = SoundType.Sword_Slash_Hit_Rock; // 바위/통나무 맞는 소리(예시)
-                    isRemove = false;
-                    break;
-            }
 
-            // 사운드 재생
-            if (soundType >= 0)
-            {
-                SoundManager.instance.Play_SoundEffect(soundType);
-            }
-
-            // 화면에 점수 텍스트 보여 주기 (Tree, Rock만 의미)
-            if (score > 0)
-            {
-                GameManager.instance.PointUp(score);
-                ShowScore(score);
-            }
-
-            if (isRemove)
-            {
-                // 풀링 회수
-                Despawn();
-            }
-        }
-        else if (other.CompareTag(ConstData.PlayerTag))
-        {
-            if (!Player_Control.instance.isImmortal && !Player_Control.instance.isHit)
-            {
-                switch (type)
-                {
-                    case Type.Tree:
-                    case Type.Log:
-                        {
-                            SoundManager.instance.Play_SoundEffect(SoundType.Hit_Player);
-                            Player_Control.instance.HitObtacle(type);
-                            Despawn();
-                        }
-                        break;
-                    case Type.Rock:
-                        {
-
-                        }
-                        break;
-
-                }
             }
         }
         // 2) DeadZone에 들어갔을 때 -> 풀링으로 복귀

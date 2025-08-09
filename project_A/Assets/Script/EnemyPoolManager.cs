@@ -10,12 +10,12 @@ public class EnemyPoolManager : MonoBehaviour
     public static EnemyPoolManager Instance { get; private set; }
 
     [Header("Enemy Prefabs")]
-    public GameObject goblinPrefab;      // Goblin ÇÁ¸®ÆÕ (Enemy ÄÄÆ÷³ÍÆ® Æ÷ÇÔ)
+    public GameObject ghostPrefab;      // Ghost ÇÁ¸®ÆÕ (Enemy ÄÄÆ÷³ÍÆ® Æ÷ÇÔ)
     public GameObject skeletonPrefab;    // Skeleton ÇÁ¸®ÆÕ
     public GameObject batPrefab;         // Bat ÇÁ¸®ÆÕ
     public GameObject slimePrefab;       // Slime ÇÁ¸®ÆÕ
 
-    private Queue<Enemy> goblinPool = new Queue<Enemy>();
+    private Queue<Enemy> ghostPool = new Queue<Enemy>();
     private Queue<Enemy> skeletonPool = new Queue<Enemy>();
     private Queue<Enemy> batPool = new Queue<Enemy>();
     private Queue<Enemy> slimePool = new Queue<Enemy>();
@@ -39,15 +39,15 @@ public class EnemyPoolManager : MonoBehaviour
 
         switch (type)
         {
-            case MonsterType.Goblin:
-                if (goblinPool.Count > 0)
+            case MonsterType.Ghost:
+                if (ghostPool.Count > 0)
                 {
-                    result = goblinPool.Dequeue();
+                    result = ghostPool.Dequeue();
                     result.gameObject.SetActive(true);
                 }
                 else
                 {
-                    GameObject go = Instantiate(goblinPrefab);
+                    GameObject go = Instantiate(ghostPrefab);
                     result = go.GetComponent<Enemy>();
                 }
                 break;
@@ -114,8 +114,8 @@ public class EnemyPoolManager : MonoBehaviour
 
         switch (enemy.monsterType)
         {
-            case MonsterType.Goblin:
-                goblinPool.Enqueue(enemy);
+            case MonsterType.Ghost:
+                ghostPool.Enqueue(enemy);
                 break;
             case MonsterType.Skeleton:
                 skeletonPool.Enqueue(enemy);
