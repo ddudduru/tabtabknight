@@ -186,6 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38406c12eeee85e409ed2c3ca91e8050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monsterType: 4
   scoreUpText: {fileID: 617372456093818006, guid: 18d375de47869864b86e4c9dab39fa28, type: 3}
 --- !u!1 &649121245425506761
 GameObject:

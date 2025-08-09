@@ -252,6 +252,11 @@ public class MapController : MonoBehaviour
                         spawnEnemy.transform.rotation = Quaternion.identity;
                         spawnEnemy.tag = ConstData.EnemyTag;
                         spawnEnemy.monsterType = mType;
+
+                        // 플레이어 Transform 확보(예시)
+                        Transform playerTr = GameObject.FindWithTag(ConstData.PlayerTag)?.transform;
+                        // 초기화(브레인 생성+세팅)
+                        spawnEnemy.Initialize(mType, playerTr);
                     }
                 }
             }

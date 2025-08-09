@@ -389,6 +389,16 @@ public class Player_Control : MonoBehaviour
         Invoke(nameof(ResetHit), 0.1f);
     }
 
+    public void HitPlayer(float addDizzyGain)
+    {
+        if (isHit) return;
+        isAttacking = false;
+        animator.SetTrigger("doDizzy");
+        dizzyTimer += addDizzyGain;
+        isHit = true;
+        Invoke(nameof(ResetHit), 0.1f);
+    }
+
     private void ResetHit()
     {
         isHit = false;

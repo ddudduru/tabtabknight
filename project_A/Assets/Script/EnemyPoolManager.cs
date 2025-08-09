@@ -97,8 +97,7 @@ public class EnemyPoolManager : MonoBehaviour
 
         if (result != null)
         {
-            result.OnDespawn = null;
-            result.OnDespawn += () => ReturnToPool(result);
+            result.ReturnToPool = ReturnToPool;
             result.transform.parent = null;
         }
         return result;
