@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 5a0af2b7ad474163ab7ad230001ffe27
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 169863
+  packageName: RPG Monster Wave 2 Polyart
+  packageVersion: 1.5
+  assetPath: Assets/RPGMonsterWave02Polyart/Shaders/PAMaskTint.shader
+  uploadId: 634945

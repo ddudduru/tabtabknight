@@ -17,7 +17,7 @@ public class CombinedMapEditorWindow : EditorWindow
 
     private ObstacleType bevelObstacle = ObstacleType.Tree;
     private ItemType bevelItem = ItemType.Skill;
-    private MonsterType bevelMonster = MonsterType.Goblin;
+    private MonsterType bevelMonster = MonsterType.Ghost;
 
     private bool isErasing = false;
     private bool isPainting = false;
@@ -245,7 +245,7 @@ public class CombinedMapEditorWindow : EditorWindow
         switch (type)
         {
             case MonsterType.None: return Color.white;
-            case MonsterType.Goblin: return new Color(1f, 0.5f, 0f);
+            case MonsterType.Ghost: return new Color(1f, 0.5f, 0f);
             case MonsterType.Skeleton: return Color.gray;
             case MonsterType.Bat: return new Color(0.6f, 0f, 0.6f);
             case MonsterType.Slime: return new Color(0.2f, 1f, 0.2f);

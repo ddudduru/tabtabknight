@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f114b9c39d5c46f7a611b3cb023d2f1e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 169863
+  packageName: RPG Monster Wave 2 Polyart
+  packageVersion: 1.5
+  assetPath: Assets/RPGMonsterWave02Polyart/Animators/FlyingDemon.controller
+  uploadId: 634945

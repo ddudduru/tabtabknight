@@ -50,7 +50,7 @@ ModelImporter:
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1
-      loopBlendPositionXZ: 1
+      loopBlendPositionXZ: 0
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 1
@@ -748,3 +748,10 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228701
+  packageName: RPG Tiny Hero Wave PBR
+  packageVersion: 1.0
+  assetPath: Assets/RPG Hero Duo/Animation/SwordAndShield/Dizzy_SwordAndShield.fbx
+  uploadId: 747417
