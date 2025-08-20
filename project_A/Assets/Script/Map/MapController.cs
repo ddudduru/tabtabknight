@@ -58,6 +58,14 @@ public class MapController : MonoBehaviour
             mapLengthZ = 0f;
     }
 
+    // 맵 스크롤, 적 이동, 발사체 각각 필요하면 분리 가능. 일단 한 번에.
+    public static float WorldSpeedMul { get; private set; } = 1f; // 0이면 '정지'
+
+    public static void SetWorldSpeed(float worldMul)
+    {
+        WorldSpeedMul = worldMul;
+    }
+
     private void Start()
     {
         InitMapSetting();
@@ -78,7 +86,7 @@ public class MapController : MonoBehaviour
 
     private void Update()
     {
-        float deltaZ = GameManager.instance.gameSpd * Time.deltaTime;
+        float deltaZ = WorldSpeedMul * Time.deltaTime;
 
         // 모든 맵 파트 Z 방향으로 스크롤
         for (int i = 0; i < mapParts.Length; i++)
@@ -217,7 +225,8 @@ public class MapController : MonoBehaviour
                         int rI = Random.Range(0, 3);
                         iType = (rI == 0) ? ItemType.Skill :
                                 (rI == 1) ? ItemType.Forward :
-                                            ItemType.Coin;
+                                            (rI == 2) ? ItemType.Coin :
+                                            ItemType.Magnet;
                     }
 
                     Item spawnItem = ItemPoolManager.Instance.GetItem(iType);
@@ -237,10 +246,11 @@ public class MapController : MonoBehaviour
                 {
                     if (mType == MonsterType.Random)
                     {
-                        int rM = Random.Range(0, 4);
+                        int rM = Random.Range(0, 5);
                         mType = (rM == 0) ? MonsterType.Ghost :
                                 (rM == 1) ? MonsterType.Skeleton :
                                 (rM == 2) ? MonsterType.Bat :
+                                (rM == 3) ? MonsterType.Crab :
                                             MonsterType.Slime;
                     }
 

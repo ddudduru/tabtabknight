@@ -235,6 +235,7 @@ public class CombinedMapEditorWindow : EditorWindow
             case ItemType.Skill: return Color.cyan;
             case ItemType.Forward: return Color.yellow;
             case ItemType.Coin: return Color.green;
+            case ItemType.Magnet: return Color.blue;
             case ItemType.Random: return new Color(1f, 0.4f, 1f);
             default: return Color.white;
         }
@@ -249,6 +250,7 @@ public class CombinedMapEditorWindow : EditorWindow
             case MonsterType.Skeleton: return Color.gray;
             case MonsterType.Bat: return new Color(0.6f, 0f, 0.6f);
             case MonsterType.Slime: return new Color(0.2f, 1f, 0.2f);
+            case MonsterType.Crab: return Color.red;
             case MonsterType.Random: return Color.magenta;
             default: return Color.white;
         }

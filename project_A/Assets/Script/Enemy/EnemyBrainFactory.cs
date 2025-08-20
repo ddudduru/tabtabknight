@@ -8,6 +8,7 @@ public static class EnemyBrainFactory
             case MonsterType.Skeleton: return new DefaultForwardBrain();
             case MonsterType.Bat: return new DefaultForwardBrain();
             case MonsterType.Slime: return new DefaultForwardBrain();
+            case MonsterType.Crab: return new CrabBrain();
             default: return new DefaultForwardBrain();
         }
     }

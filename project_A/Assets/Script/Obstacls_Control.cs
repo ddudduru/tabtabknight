@@ -42,7 +42,7 @@ public class Obstacls_Control : MonoBehaviour
         // 단, Log 타입만 추가 속도를 더해 줍니다.
         if (type == Type.Log)
         {
-            float extraSpeed = GameManager.instance.gameSpd * (logExtraSpeedMultiplier - 1f);
+            float extraSpeed = MapController.WorldSpeedMul * (logExtraSpeedMultiplier - 1f);
             transform.Translate(Vector3.forward * extraSpeed * Time.deltaTime, Space.World);
         }
     }

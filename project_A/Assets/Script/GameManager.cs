@@ -41,8 +41,8 @@ public class GameManager : MonoBehaviour
                 break;
             }
             yield return new WaitForSeconds(30f);
-            gameLevel += 1;
-            gameSpd += 1f;
+            //gameLevel += 1;
+            //gameSpd += 1f;
             UI_Control.instance.PopUpLevel();
         }
     }

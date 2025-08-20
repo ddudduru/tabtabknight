@@ -19,6 +19,8 @@ public class Player_Control : MonoBehaviour
     [SerializeField] private float moveSpeed = 3f;
     [SerializeField] public float maxStamina = 100f;
     public float currentStamina;
+    public float currentHP;
+    [SerializeField] private float dizzyHpDPS = 8f;   // 기절 중 초당 HP 감소량
 
     [Header("Acceleration")]
     [SerializeField] private float initialAcceleration = 7f;
@@ -28,7 +30,7 @@ public class Player_Control : MonoBehaviour
 
     [Header("Skill / State")]
     public int maxSkillLevel = 5;
-    private float forwardActive;       // 0 or 1
+    public float forwardActive;       // 0 or 1
     public SkillController skillController;
 
     [Header("Attack")]
@@ -138,7 +140,11 @@ public class Player_Control : MonoBehaviour
 
         if (isDizzy)
         {
-            rigidbodyComponent.linearVelocity = new Vector3(0f, 0f, GameManager.instance.gameSpd);
+            rigidbodyComponent.linearVelocity = new Vector3(0f, 0f, MapController.WorldSpeedMul);
+        }
+        else
+        {
+            MapController.SetWorldSpeed(5f);
         }
     }
 
@@ -310,14 +316,6 @@ public class Player_Control : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        if (forwardActive > 0 && other.CompareTag(ConstData.CannotGoZoneTag))
-        {
-            EndForward();
-        }
-    }
-
     /// <summary>
     /// 스태미나가 amount 이상이면 차감 후 true, 부족하면 false 반환.
     /// </summary>
@@ -339,12 +337,21 @@ public class Player_Control : MonoBehaviour
         currentStamina = Mathf.Min(currentStamina + amount, maxStamina);
     }
 
-
+    public void StartForward(float duration)
+    {
+        forwardActive = duration;
+    }
 
     private void HandleItemPickup(Item itemComp)
     {
         int scoreGain = 50;
-        switch (itemComp.type)
+        // 1) SO 기반 처리 먼저 시도
+        if (itemComp.effect != null)
+        {
+            itemComp.effect.Apply(this); // 효과 실행(사운드/팝업도 효과 쪽에서)
+            return;
+        }
+        /*switch (itemComp.type)
         {
             case ItemType.Skill:
                 currentStamina = Mathf.Min(maxStamina, currentStamina + 50f);
@@ -355,9 +362,9 @@ public class Player_Control : MonoBehaviour
             case ItemType.Coin:
                 scoreGain = 150;
                 break;
-        }
-        SoundManager.instance.Play_SoundEffect(SoundManager.SoundType.Effect_Item_Get);
-        DisplayScorePopup(scoreGain);
+        }*/
+        /*SoundManager.instance.Play_SoundEffect(SoundManager.SoundType.Effect_Item_Get);
+        DisplayScorePopup(scoreGain);*/
     }
 
     public void HitObstacle(Obstacls_Control.Type type)
@@ -419,7 +426,7 @@ public class Player_Control : MonoBehaviour
             staminaText.text = $"Stamina: {currentStamina:0}/{maxStamina:0}";
     }
 
-    private void DisplayScorePopup(int score)
+    public void DisplayScorePopup(int score)
     {
         if (scoreUpPrefab == null) return;
         GameObject popup = Instantiate(

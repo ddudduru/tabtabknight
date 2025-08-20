@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     public Animator Anim { get; private set; }   // ← 프로퍼티 노출!
     private IEnemyBrain brain;
     private Transform player;
+    public float enemySpeed = 1f;
 
     // 풀 매니저가 주입하는 반환 콜백
     public Action<Enemy> ReturnToPool { get; set; }
@@ -35,7 +36,7 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        var baseDelta = new Vector3(0f, 0f, GameManager.instance.gameSpd) * Time.deltaTime;
+        var baseDelta = new Vector3(0f, 0f, enemySpeed) * Time.deltaTime;
         var finalDelta = (brain != null)
             ? brain.ModifyMove(baseDelta, Time.deltaTime)
             : baseDelta;
@@ -76,6 +77,8 @@ public class Enemy : MonoBehaviour
                 score = 15; sound = SoundType.Sword_Slash_Hit_Normal; break;
             case MonsterType.Slime:
                 score = 5; sound = SoundType.Sword_Slash_Hit_Normal; break;
+            case MonsterType.Crab:
+                score = 10; sound = SoundType.Sword_Slash_Hit_Normal; break;
         }
 
         if (sound != SoundType.None)

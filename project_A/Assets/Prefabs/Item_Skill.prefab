@@ -91,6 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+  effect: {fileID: 11400000, guid: 4a5f6980d97429b41b4e4b053e56aa88, type: 2}
 --- !u!1001 &7842244895264034604
 PrefabInstance:
   m_ObjectHideFlags: 0

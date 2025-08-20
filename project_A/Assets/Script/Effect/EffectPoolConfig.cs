@@ -2,9 +2,11 @@ using UnityEngine;
 
 public enum EffectPoolKind
 {
+    None,
     DashVFX,
     ExplosionVFX,
     AreaAttackVFX,
+    MagnetAuraVFX,
     // 필요 시 더 추가
 }
 

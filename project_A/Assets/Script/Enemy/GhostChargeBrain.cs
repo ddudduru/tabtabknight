@@ -31,6 +31,7 @@ public class GhostChargeBrain : IEnemyBrain
         this.player = player;
         state = State.Move;
         timer = 0f;
+        owner.enemySpeed = 1f;
     }
 
     public Vector3 ModifyMove(Vector3 baseDelta, float dt)

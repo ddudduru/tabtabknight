@@ -75,6 +75,7 @@ public enum ItemType
     Skill,   // 스킬 아이템
     Forward, // 포워드 아이템
     Coin,    // 코인 아이템
+    Magnet,  // 자석 아이템
     Random   // 런타임에 랜덤으로 결정 (Skill, Forward, Coin 중 하나)
 }
 
@@ -88,5 +89,6 @@ public enum MonsterType
     Skeleton,    // 스켈레톤
     Bat,         // 박쥐
     Slime,       // 슬라임 (새로 추가)
+    Crab,        // 게 (사이드 무빙형)
     Random       // 런타임에 랜덤으로 결정 (Goblin, Skeleton, Bat, Slime 중 하나)
 }
