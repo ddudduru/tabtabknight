@@ -36,6 +36,9 @@ public class MapController : MonoBehaviour
     private float mapLengthZ;
     private int nextRecycleIndex = 0;
 
+    [Header("진행/스크롤 소스")]
+    [SerializeField] private LevelProgressManager3D progress; // 드래그 or 자동 탐색
+
     private void Awake()
     {
         // --- CombinedMapData 패턴 로딩 ---
@@ -86,30 +89,39 @@ public class MapController : MonoBehaviour
 
     private void Update()
     {
-        float deltaZ = WorldSpeedMul * Time.deltaTime;
+        if (progress == null)
+            return;
 
-        // 모든 맵 파트 Z 방향으로 스크롤
+        // ★ ‘단일 소스’에서 현재 속도/방향을 읽는다
+        float scrollSpeed = progress.CurrentSpeed;            // 기절/속업 반영된 속도
+        Vector3 dir = progress.ScrollDir;               // 전진축 반대(맵이 올라올 방향)
+
+        float delta = scrollSpeed * WorldSpeedMul * Time.deltaTime;
+
+        // 모든 맵 파트 스크롤
         for (int i = 0; i < mapParts.Length; i++)
-        {
-            mapParts[i].Translate(Vector3.forward * deltaZ, Space.World);
-        }
+            mapParts[i].Translate(dir * delta, Space.World);
 
-        // 순차적으로 한 프레임에 하나씩 재활용 체크
+        // 이하 재활용/스폰 로직은 동일
         Transform part = mapParts[nextRecycleIndex];
-        if (part.position.z >= recycleThreshold)
+        if (Vector3.Dot(part.position, dir) >= recycleThreshold) // ← 방향성 고려
         {
-            // 재활용: 새 Z 위치 계산
-            float minZ = float.MaxValue;
+            // 가장 뒤 파트 찾기
+            float minProj = float.MaxValue;
             for (int j = 0; j < mapParts.Length; j++)
             {
                 if (j == nextRecycleIndex) continue;
-                float z = mapParts[j].position.z;
-                if (z < minZ) minZ = z;
+                float proj = Vector3.Dot(mapParts[j].position, dir);
+                if (proj < minProj) minProj = proj;
             }
-            float newZ = minZ - mapLengthZ;
-            part.position = new Vector3(part.position.x, part.position.y, newZ);
+            float newProj = minProj - mapLengthZ;
+            // dir 방향으로의 위치를 newProj가 되도록 옮김
+            Vector3 basePos = mapParts[nextRecycleIndex].position;
+            // dir에 대한 스칼라 보정
+            float curProj = Vector3.Dot(basePos, dir.normalized);
+            float diff = newProj - curProj;
+            part.position = basePos + dir.normalized * diff;
 
-            // 콘텐츠(장애물 + 아이템 + 몬스터)만 리셋
             SetupCombinedForPartContent(nextRecycleIndex);
         }
         nextRecycleIndex = (nextRecycleIndex + 1) % mapParts.Length;

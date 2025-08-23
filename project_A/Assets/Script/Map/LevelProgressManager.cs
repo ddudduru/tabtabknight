@@ -33,6 +33,29 @@ public class LevelProgressManager3D : MonoBehaviour
 
     // 런타임 상태
     public float distanceTraveled { get; private set; } = 0f; // 누적 진행거리
+                                                              // LevelProgressManager3D.cs 안에 추가
+                                                              // 1) 옵션 토글 추가 (원하면 인스펙터에서 끄고 켤 수 있도록)
+    [SerializeField] bool freezeWorldOnDizzy = true;
+
+    // 2) 현재 속도 프로퍼티 추가/수정
+    public float CurrentSpeed
+    {
+        get
+        {
+            // 기절 중엔 완전 정지
+            if (freezeWorldOnDizzy && Player_Control.Instance && Player_Control.Instance.IsDizzy)
+                return 0f;
+
+            float cur = baseMoveSpeed;
+            // (freezeWorldOnDizzy를 끈 경우엔 느려지게만 하고 싶다면 아래 줄 사용)
+            if (Player_Control.Instance && Player_Control.Instance.IsDizzy)
+                cur *= dizzySpeedFactor;
+            return cur;
+        }
+    }
+    // 맵이 흘러야 하는 방향(플레이어 전진축의 반대)
+    public Vector3 ScrollDir => -Fwd; // Fwd는 (movementDir.normalized)
+
     float deadGap;                    // 플레이어와 데드존 간 "스칼라" 간격(월드 단위, 항상 양수)
     bool finished = false;
     bool dead = false;
@@ -61,12 +84,7 @@ public class LevelProgressManager3D : MonoBehaviour
     {
         if (finished || dead) return;
 
-        // 1) 현재 진행속도(기절 적용)
-        float curSpeed = baseMoveSpeed;
-        if (Player_Control.Instance && Player_Control.Instance.IsDizzy)
-            curSpeed *= dizzySpeedFactor;
-
-        // 2) 누적 거리
+        float curSpeed = CurrentSpeed;            // ★ 여기만 바꾸면 됨
         float dz = curSpeed * Time.deltaTime;
         distanceTraveled += dz;
 
