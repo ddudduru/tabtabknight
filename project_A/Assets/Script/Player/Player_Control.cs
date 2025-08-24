@@ -140,11 +140,12 @@ public class Player_Control : MonoBehaviour
 
         if (isDizzy)
         {
-            rigidbodyComponent.linearVelocity = new Vector3(0f, 0f, MapController.WorldSpeedMul);
+            MapController.SetWorldSpeed(0f);
+            rigidbodyComponent.linearVelocity = new Vector3(0f, 0f, 0f);
         }
         else
         {
-            MapController.SetWorldSpeed(5f);
+            MapController.SetWorldSpeed(2f);
         }
     }
 
@@ -166,17 +167,16 @@ public class Player_Control : MonoBehaviour
 
         currentAcceleration = Mathf.Min(currentAcceleration + Time.deltaTime * 4f, maxAcceleration);
 
-        Vector3 forwardVelocity = Vector3.zero;
         if (forwardActive > 0)
         {
-            forwardVelocity = transform.forward * moveSpeed;
             forwardActive -= Time.deltaTime;
+            MapController.SetWorldSpeed(3f);
         }
 
         Vector3 lateralVelocity = new Vector3(moveDirection * currentAcceleration, 0f, 0f);
         Vector3 baseVelocity = Vector3.zero; // ���� ��� �ӵ� �ݿ��� �ʿ��ϸ� ����
 
-        rigidbodyComponent.linearVelocity = forwardVelocity + lateralVelocity + baseVelocity;
+        rigidbodyComponent.linearVelocity = lateralVelocity + baseVelocity;
         animator.SetBool("move_dir", moveDirection == 1);
     }
 
