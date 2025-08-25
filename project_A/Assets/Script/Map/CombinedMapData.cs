@@ -90,5 +90,6 @@ public enum MonsterType
     Bat,         // 박쥐
     Slime,       // 슬라임 (새로 추가)
     Crab,        // 게 (사이드 무빙형)
+    Worm,        // 웜 (원거리 공격형)
     Random       // 런타임에 랜덤으로 결정 (Goblin, Skeleton, Bat, Slime 중 하나)
 }

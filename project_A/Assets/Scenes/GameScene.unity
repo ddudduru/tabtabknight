@@ -20518,6 +20518,7 @@ GameObject:
   - component: {fileID: 1247147173}
   - component: {fileID: 1247147175}
   - component: {fileID: 1247147176}
+  - component: {fileID: 1247147177}
   m_Layer: 0
   m_Name: ObjectPool
   m_TagString: Untagged
@@ -20597,6 +20598,20 @@ MonoBehaviour:
   batPrefab: {fileID: 0}
   slimePrefab: {fileID: 649017730276611597, guid: bfdd50216ae84674b9d59339b2e3791e, type: 3}
   crabPrefab: {fileID: 649017730276611597, guid: 057f92f1a1ce1484a905dbdc994777fe, type: 3}
+  wormPrefab: {fileID: 649017730276611597, guid: 61a92d5050c928e4382e305a2321df79, type: 3}
+--- !u!114 &1247147177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247147172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 972275d9e633d5048a0a27abed055017, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectilePoolManager
+  projectilePrefab: {fileID: 7239522208625374991, guid: a992b0177bc8f4d46942029ac54a885d, type: 3}
 --- !u!1 &1260418064
 GameObject:
   m_ObjectHideFlags: 0

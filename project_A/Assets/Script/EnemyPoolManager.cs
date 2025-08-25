@@ -15,12 +15,14 @@ public class EnemyPoolManager : MonoBehaviour
     public GameObject batPrefab;         // Bat ÇÁ¸®ÆÕ
     public GameObject slimePrefab;       // Slime ÇÁ¸®ÆÕ
     public GameObject crabPrefab;       // Crab ÇÁ¸®ÆÕ
+    public GameObject wormPrefab;       // Crab ÇÁ¸®ÆÕ
 
     private Queue<Enemy> ghostPool = new Queue<Enemy>();
     private Queue<Enemy> skeletonPool = new Queue<Enemy>();
     private Queue<Enemy> batPool = new Queue<Enemy>();
     private Queue<Enemy> slimePool = new Queue<Enemy>();
     private Queue<Enemy> crabPool = new Queue<Enemy>();
+    private Queue<Enemy> wormPool = new Queue<Enemy>();
 
     private void Awake()
     {
@@ -104,6 +106,18 @@ public class EnemyPoolManager : MonoBehaviour
                     result = go.GetComponent<Enemy>();
                 }
                 break;
+            case MonsterType.Worm:
+                if (wormPool.Count > 0)
+                {
+                    result = wormPool.Dequeue();
+                    result.gameObject.SetActive(true);
+                }
+                else
+                {
+                    GameObject go = Instantiate(wormPrefab);
+                    result = go.GetComponent<Enemy>();
+                }
+                break;
             default:
                 return null;
         }
@@ -141,6 +155,10 @@ public class EnemyPoolManager : MonoBehaviour
             case MonsterType.Crab:
                 crabPool.Enqueue(enemy);
                 break;
+            case MonsterType.Worm:
+                wormPool.Enqueue(enemy);
+                break;
         }
     }
 }
+
