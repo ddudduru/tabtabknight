@@ -2,6 +2,7 @@
 // WormBrain.cs
 // IEnemyBrain 기반: 숨음(Hidden) ↔ 지상(Grounded) 상태 + 원거리 사격
 // ---------------------------------------------------
+using System.Collections;
 using UnityEngine;
 
 public class WormBrain : IEnemyBrain
@@ -16,11 +17,11 @@ public class WormBrain : IEnemyBrain
     [Header("탐지/공격")]
     private float detectRange = 40f;     // 이 이하면 지상으로 올라옴(Grounded)
     private float exitRange = 55f;     // 이 이상 멀어지면 다시 숨어감(Hidden) (히스테리시스)
-    private float fireRange = 35f;     // 사격 가능한 거리
+    private float fireRange = 50f;     // 사격 가능한 거리
     private float fireAngle = 55f;     // 전방 기준 사격 허용 각도
     private bool requireLOS = true;    // 단순 시야(레이) 체크
 
-    private float fireCooldown = 1.6f;   // 한 발 쏘고 다음 발까지 대기
+    private float fireCooldown = 3f;   // 한 발 쏘고 다음 발까지 대기
     private float fireTimer = 0f;
 
     // ===== 연출/히트박스 =====
@@ -30,7 +31,7 @@ public class WormBrain : IEnemyBrain
     private Collider[] cols;
 
     // ===== 투사체 =====
-    private float projSpeed = 20f;
+    private float projSpeed = 10f;
     private float projLife = 3.5f;
     private float projDizzyOnHit = 2.5f; // 플레이어 피격 시 어지럼 증가량
     private float muzzleYOffset = 0.7f; // 총구 높이
@@ -56,6 +57,7 @@ public class WormBrain : IEnemyBrain
 
     public Vector3 ModifyMove(Vector3 baseDelta, float dt)
     {
+        baseDelta = Vector3.zero;
         if (player == null) return baseDelta;
 
         // XZ 평면 거리 / 각도
@@ -200,15 +202,20 @@ public class WormBrain : IEnemyBrain
     // WormBrain.cs 내부
     private void Fire(Vector3 dirToPlayerFlat)
     {
-        owner.Anim.SetTrigger("doAttack");
+        owner.StartCoroutine(FireCoroutine(dirToPlayerFlat));
+    }
 
+    private IEnumerator FireCoroutine(Vector3 dirToPlayerFlat)
+    {
+        owner.Anim.SetTrigger("doAttack");
+        yield return new WaitForSeconds(0.22f);
         // 1) Y축 무시: XZ 평면 방향만 사용 (yaw만)
         Vector3 baseDir = new Vector3(dirToPlayerFlat.x, 0f, dirToPlayerFlat.z).normalized;
         if (baseDir.sqrMagnitude < 0.0001f)
             baseDir = new Vector3(owner.transform.forward.x, 0f, owner.transform.forward.z).normalized;
 
         // 2) 3갈래 샷 각도(도): 중앙 0°, 좌/우 ±branchDeg
-        const float branchDeg = 10f;     // 좌우 벌어짐 각도
+        const float branchDeg = 15f;     // 좌우 벌어짐 각도
         const float jitterDeg = 2f;      // 전체 군집에 살짝 랜덤(선택)
         float baseJitter = Random.Range(-jitterDeg, jitterDeg);
 

@@ -64,7 +64,7 @@ public class CombinedMapEditorWindow : EditorWindow
         EditorGUILayout.BeginHorizontal();
         if (GUILayout.Button("Load JSON"))
         {
-            string path = EditorUtility.OpenFilePanel("Load Combined JSON", Application.dataPath, "json");
+            string path = EditorUtility.OpenFilePanel("Load Combined JSON", Application.dataPath+ "Data/MapData", "json");
             if (!string.IsNullOrEmpty(path))
             {
                 string json = File.ReadAllText(path);
@@ -73,7 +73,7 @@ public class CombinedMapEditorWindow : EditorWindow
         }
         if (GUILayout.Button("Save JSON"))
         {
-            string path = EditorUtility.SaveFilePanel("Save Combined JSON", Application.dataPath, "CombinedMapData", "json");
+            string path = EditorUtility.SaveFilePanel("Save Combined JSON", Application.dataPath + "Data/MapData", "CombinedMapData", "json");
             if (!string.IsNullOrEmpty(path))
             {
                 File.WriteAllText(path, mapData.ToJson());
@@ -251,6 +251,7 @@ public class CombinedMapEditorWindow : EditorWindow
             case MonsterType.Bat: return new Color(0.6f, 0f, 0.6f);
             case MonsterType.Slime: return new Color(0.2f, 1f, 0.2f);
             case MonsterType.Crab: return Color.red;
+            case MonsterType.Worm: return Color.coral;
             case MonsterType.Random: return Color.magenta;
             default: return Color.white;
         }

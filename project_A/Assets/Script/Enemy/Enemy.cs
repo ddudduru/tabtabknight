@@ -79,6 +79,8 @@ public class Enemy : MonoBehaviour
                 score = 5; sound = SoundType.Sword_Slash_Hit_Normal; break;
             case MonsterType.Crab:
                 score = 10; sound = SoundType.Sword_Slash_Hit_Normal; break;
+            case MonsterType.Worm:
+                score = 30; sound = SoundType.Sword_Slash_Hit_Normal; break;
         }
 
         if (sound != SoundType.None)
