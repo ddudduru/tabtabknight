@@ -13803,8 +13803,6 @@ GameObject:
   - component: {fileID: 669438388}
   - component: {fileID: 669438389}
   - component: {fileID: 669438390}
-  - component: {fileID: 669438391}
-  - component: {fileID: 669438392}
   - component: {fileID: 669438393}
   m_Layer: 0
   m_Name: GameManager
@@ -13872,100 +13870,7 @@ MonoBehaviour:
   cellSizeX: 3
   cellSizeZ: 5
   cellY: 0
---- !u!114 &669438391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 669438386}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae80298848eefbf42b557170ba7a0173, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RaceProgress
-  targetSeconds: 30
-  referenceSpeed: 10
---- !u!114 &669438392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 669438386}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e108364e2693194bba4020574e8e60e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RaceProgressLine
-  player: {fileID: 8855052671029493892}
-  cam: {fileID: 1868494308}
-  movementDir: {x: 0, y: 0, z: -1}
-  deadRoot: {fileID: 1526952161}
-  deadSide: 1
-  deadFar: 20
-  deadNear: 13
-  deadCurve01:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 1
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  deadLocalOffset: {x: 0, y: 0, z: 0}
-  deadStickToGroundY: 1
-  deadGroundY: 0.15
-  finishRoot: {fileID: 241770412}
-  finishSide: 0
-  finishFar: 80
-  finishNear: 6
-  finishCurve01:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 1
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  appearAt: 0.8
-  visibleMag: 6
-  hideBeforeAppear: 0
-  finishLocalOffset: {x: 0, y: 0, z: 0}
-  finishStickToGroundY: 1
-  finishGroundY: 0.15
+  progress: {fileID: 669438393}
 --- !u!114 &669438393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13983,13 +13888,14 @@ MonoBehaviour:
   goal: {fileID: 241770412}
   movementDir: {x: 0, y: 0, z: -1}
   baseMoveSpeed: 5
-  deadZoneSpeed: 5
+  deadZoneSpeed: 4
   dizzySpeedFactor: 0.5
   targetDistance: 1000
   goalAppearAt: 0.8
   goalVisibleAhead: 6
   initialDeadGap: 20
   hideGoalBeforeAppear: 1
+  freezeWorldOnDizzy: 1
 --- !u!1001 &676978980
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35250,7 +35156,6 @@ GameObject:
   - component: {fileID: 8189980435890444863}
   - component: {fileID: 8189980435890444865}
   - component: {fileID: 9036980634706802143}
-  - component: {fileID: 9036980634706802144}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -35557,19 +35462,6 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0.5, z: 0}
---- !u!114 &9036980634706802144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8189980435890444862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac17c832235fc8e4fa7cf044ec830d04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerProgressReporter
-  worldForward: {x: 0, y: 0, z: 1}
 --- !u!1 &9105106662894422571
 GameObject:
   m_ObjectHideFlags: 0
