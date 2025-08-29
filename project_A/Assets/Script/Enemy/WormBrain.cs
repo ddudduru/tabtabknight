@@ -16,12 +16,12 @@ public class WormBrain : IEnemyBrain
     // ===== 탐지/공격 파라미터 =====
     [Header("탐지/공격")]
     private float detectRange = 40f;     // 이 이하면 지상으로 올라옴(Grounded)
-    private float exitRange = 55f;     // 이 이상 멀어지면 다시 숨어감(Hidden) (히스테리시스)
-    private float fireRange = 50f;     // 사격 가능한 거리
+    private float exitRange = 50f;     // 이 이상 멀어지면 다시 숨어감(Hidden) (히스테리시스)
+    private float fireRange = 100f;     // 사격 가능한 거리
     private float fireAngle = 55f;     // 전방 기준 사격 허용 각도
     private bool requireLOS = true;    // 단순 시야(레이) 체크
 
-    private float fireCooldown = 3f;   // 한 발 쏘고 다음 발까지 대기
+    private float fireCooldown = 1f;   // 한 발 쏘고 다음 발까지 대기
     private float fireTimer = 0f;
 
     // ===== 연출/히트박스 =====
