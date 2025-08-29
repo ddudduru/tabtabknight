@@ -19,9 +19,34 @@ public class Player_Control : MonoBehaviour
     [SerializeField] private float moveSpeed = 3f;
     [SerializeField] public float maxStamina = 100f;
     public float currentStamina;
-    public float currentHP;
-    [SerializeField] private float dizzyHpDPS = 8f;   // 기절 중 초당 HP 감소량
 
+    [Header("HP")]
+    [SerializeField] public float maxHP = 100f;
+    [SerializeField] private float currentHpInternal;
+
+    /// <summary>
+    /// HP 프로퍼티: 감소 시 0 이하로 떨어지면 자동 종료
+    /// </summary>
+    public float CurrentHP
+    {
+        get => currentHpInternal;
+        private set
+        {
+            currentHpInternal = Mathf.Clamp(value, 0f, maxHP);
+
+            if (currentHpInternal <= 0f)
+            {
+                // 게임 종료 처리
+                UI_Control.instance.FinishGame();
+            }
+        }
+    }
+    [Header("HP Regen")]
+    [SerializeField] private bool useRegen = true;
+    [SerializeField] private float regenDelay = 4f;      // seconds without being hit before regen starts
+    [SerializeField] private float regenPerSecond = 3f;  // hp/sec when regenerating
+    private float lastHitTime = -999f;                   // last time we took damage
+   
     [Header("Acceleration")]
     [SerializeField] private float initialAcceleration = 7f;
     [SerializeField] private float maxAcceleration = 10f;
@@ -64,6 +89,9 @@ public class Player_Control : MonoBehaviour
         currentAcceleration = initialAcceleration;
         forwardActive = 0;
 
+        // HP 초기화
+        CurrentHP = maxHP;
+
         // SkillController �ʱ�ȭ �� ���
         skillController = gameObject.AddComponent<SkillController>();
         RegisterSkills();
@@ -76,7 +104,25 @@ public class Player_Control : MonoBehaviour
         HandleDizzyState();
         HandleMovement();
         HandleAttackRaycast();
+        HandleHpRegen();
         UpdateUI();
+    }
+
+    public void TakeDamage(float damage, float addDizzyGain = 0f)
+    {
+        if (damage > 0f)
+        {
+            CurrentHP -= damage;
+        }
+
+        if (CurrentHP > 0f && addDizzyGain > 0f)
+        {
+            animator.SetTrigger("doDizzy");
+            dizzyTimer += addDizzyGain;
+        }
+
+        isHit = true;
+        Invoke(nameof(ResetHit), 0.1f);
     }
 
     #region Input Handling
@@ -134,6 +180,20 @@ public class Player_Control : MonoBehaviour
         isDizzy = (dizzyTimer > 0f);
     }
 
+    // ADD: HP regen 로직
+    private void HandleHpRegen()
+    {
+        if (!useRegen) { return; }
+        if (CurrentHP <= 0f) { return; }
+        if (CurrentHP >= maxHP) { return; }
+        if (isDizzy) { return; } // 기절 중에는 재생 X (원하면 제거)
+
+        if (Time.time - lastHitTime >= regenDelay)
+        {
+            CurrentHP = Mathf.Min(maxHP, CurrentHP + regenPerSecond * Time.deltaTime);
+        }
+    }
+
     private void HandleDizzyState()
     {
         animator.SetBool("isDizzy", isDizzy);
@@ -141,7 +201,7 @@ public class Player_Control : MonoBehaviour
         if (isDizzy)
         {
             MapController.SetWorldSpeed(0f);
-            rigidbodyComponent.linearVelocity = new Vector3(0f, 0f, 0f);
+            rigidbodyComponent.linearVelocity = Vector3.zero;
         }
         else
         {
@@ -367,7 +427,7 @@ public class Player_Control : MonoBehaviour
         DisplayScorePopup(scoreGain);*/
     }
 
-    public void HitObstacle(Obstacls_Control.Type type)
+    public void HitObstacle(Obstacls_Control.Type type,float damage=10f)
     {
         if (isHit) return;
 
@@ -389,21 +449,21 @@ public class Player_Control : MonoBehaviour
                 EndSkill();
                 break;
         }
-        dizzyTimer += dizzyGain;
+
+        TakeDamage(damage, dizzyGain);
 
         // 0.1�ʰ� �߰� �ǰ� ����
         isHit = true;
         Invoke(nameof(ResetHit), 0.1f);
     }
 
-    public void HitPlayer(float addDizzyGain)
+    public void HitPlayer(float addDizzyGain,float damage=5f)
     {
         if (isHit) return;
         isAttacking = false;
-        animator.SetTrigger("doDizzy");
-        dizzyTimer += addDizzyGain;
-        isHit = true;
-        Invoke(nameof(ResetHit), 0.1f);
+        TakeDamage(damage, addDizzyGain);
+        //isHit = true;
+        //Invoke(nameof(ResetHit), 0.1f);
     }
 
     private void ResetHit()

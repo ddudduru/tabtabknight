@@ -11,6 +11,10 @@ public class UI_Control : MonoBehaviour
     [SerializeField] private GameObject dizzyPanel;
     [SerializeField] private TextMeshProUGUI dizzyText;
 
+    [Header("Dizzy UI")]
+    [SerializeField] private GameObject HpPanel;
+    [SerializeField] private Image hpFrontImage;
+
     [Header("Score UI")]
     [SerializeField] private TextMeshProUGUI scoreText;
 
@@ -57,6 +61,11 @@ public class UI_Control : MonoBehaviour
         else
         {
             dizzyPanel.SetActive(false);
+        }
+
+        if (hpFrontImage != null)
+        {
+            hpFrontImage.fillAmount = player.CurrentHP / player.maxHP;
         }
         // Score UI
         scoreText.text = string.Format("{0:#,0}", GameManager.instance.score);

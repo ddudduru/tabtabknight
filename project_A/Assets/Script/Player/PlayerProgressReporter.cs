@@ -19,11 +19,11 @@ public class PlayerProgressReporter : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (RaceProgress.Instance == null) return;
+        /*if (RaceProgress.Instance == null) return;
 
         Vector3 p = transform.position;
         float dz = Vector3.Dot(p - _lastPos, worldForward); // 지난 프레임 대비 +Z 성분
         if (dz > 0f) RaceProgress.Instance.AccumulatePlayer(dz);
-        _lastPos = p;
+        _lastPos = p;*/
     }
 }
