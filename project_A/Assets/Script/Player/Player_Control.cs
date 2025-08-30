@@ -58,6 +58,11 @@ public class Player_Control : MonoBehaviour
     public float forwardActive;       // 0 or 1
     public SkillController skillController;
 
+    [Header("Healing")]
+    [SerializeField] private float heartHealAmount = 30f;   // fixed heal
+    [SerializeField] private bool heartHealIsPercent = false; // if true, treat amount as % of maxHP
+
+
     [Header("Attack")]
     [SerializeField] private float attackCooldown = 0.2f;
     private float attackTimer;
@@ -465,6 +470,14 @@ private void HandleMovement()
     public void StartForward(float duration)
     {
         forwardActive = duration;
+    }
+
+    public void Heal(float amount, bool asPercent = false)
+    {
+        if (amount <= 0f) { return; }
+
+        float add = asPercent ? (maxHP * amount * 0.01f) : amount;
+        CurrentHP = Mathf.Min(CurrentHP + add, maxHP); // CurrentHP는 프로퍼티(0이면 자동 종료)
     }
 
     private void HandleItemPickup(Item itemComp)

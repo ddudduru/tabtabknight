@@ -248,11 +248,11 @@ public class MapController : MonoBehaviour
                 {
                     if (iType == ItemType.Random)
                     {
-                        int rI = Random.Range(0, 3);
-                        iType = (rI == 0) ? ItemType.Skill :
-                                (rI == 1) ? ItemType.Forward :
-                                            (rI == 2) ? ItemType.Coin :
-                                            ItemType.Magnet;
+                        int rI = Random.Range(0, 4); // ← 4가지 (Skill/Forward/Coin/Heart)
+                        iType = (rI == 0) ? ItemType.Skill
+                             : (rI == 1) ? ItemType.Forward
+                             : (rI == 2) ? ItemType.Coin
+                             : ItemType.Heart;
                     }
 
                     Item spawnItem = ItemPoolManager.Instance.GetItem(iType);

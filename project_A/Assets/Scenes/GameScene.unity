@@ -20992,6 +20992,9 @@ MonoBehaviour:
   - type: 4
     prefab: {fileID: 7842244895519640243, guid: 39772a6ace1e8d94da235b1030c9926f, type: 3}
     prewarm: 0
+  - type: 5
+    prefab: {fileID: 7842244895519640243, guid: 05d3c4e35a1ecb84eaab1c863fc8079c, type: 3}
+    prewarm: 0
 --- !u!114 &1247147176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24303,7 +24306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7962199819078159310, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
       propertyPath: m_Name
-      value: Bear_4
+      value: "\uACF0"
       objectReference: {fileID: 0}
     - target: {fileID: 8036338751982688932, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
       propertyPath: m_LocalScale.x
@@ -35765,6 +35768,8 @@ MonoBehaviour:
   maxSkillLevel: 5
   forwardActive: 0
   skillController: {fileID: 0}
+  heartHealAmount: 30
+  heartHealIsPercent: 0
   attackCooldown: 0.2
   zRecoveryEnabled: 1
   initialZ: 0

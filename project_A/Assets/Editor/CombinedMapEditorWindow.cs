@@ -237,6 +237,7 @@ public class CombinedMapEditorWindow : EditorWindow
             case ItemType.Forward: return Color.yellow;
             case ItemType.Coin: return Color.green;
             case ItemType.Magnet: return Color.blue;
+            case ItemType.Heart: return Color.pink;
             case ItemType.Random: return new Color(1f, 0.4f, 1f);
             default: return Color.white;
         }

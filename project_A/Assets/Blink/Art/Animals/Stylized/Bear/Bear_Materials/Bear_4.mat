@@ -27,7 +27,8 @@ Material:
   stringTagMap:
     IgnoreProjection: False
     RenderType: Opaque
-  disabledShaderPasses: []
+  disabledShaderPasses:
+  - SRPDEFAULTUNLIT
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -109,7 +110,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Emissive_Tex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: ec7b850318e029f4ca2ea8e49339fa84, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HeightMap:
@@ -145,7 +146,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: d28fabf885861fb48ae21d198e816aaf, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMapForMatCap:
@@ -353,9 +354,9 @@ Material:
     - _Is_LightColor_Outline: 1
     - _Is_LightColor_RimLight: 1
     - _Is_NormalMapForMatCap: 0
-    - _Is_NormalMapToBase: 0
-    - _Is_NormalMapToHighColor: 0
-    - _Is_NormalMapToRimLight: 0
+    - _Is_NormalMapToBase: 1
+    - _Is_NormalMapToHighColor: 1
+    - _Is_NormalMapToRimLight: 1
     - _Is_Ortho: 0
     - _Is_OutlineTex: 0
     - _Is_PingPong_Base: 0
@@ -364,7 +365,7 @@ Material:
     - _Is_UseTweakMatCapOnShadow: 0
     - _Is_ViewCoord_Scroll: 0
     - _Is_ViewShift: 0
-    - _LightDirection_MaskOn: 0
+    - _LightDirection_MaskOn: 1
     - _LinkDetailsWithBase: 1
     - _MatCap: 0
     - _MaterialID: 1
@@ -390,12 +391,12 @@ Material:
     - _Parallax: 0.02
     - _ReceivesSSR: 1
     - _RefractionModel: 0
-    - _RimLight: 0
+    - _RimLight: 1
     - _RimLightOverridden: 0
     - _RimLightVisible: 1
     - _RimLight_FeatherOff: 0
-    - _RimLight_InsideMask: 0.0001
-    - _RimLight_Power: 0.1
+    - _RimLight_InsideMask: 0.262
+    - _RimLight_Power: 0.057
     - _Rotate_EmissiveUV: 0
     - _Rotate_MatCapUV: 0
     - _Rotate_NormalMapForMatCapUV: 0
@@ -498,7 +499,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
-    - _Emissive_Color: {r: 0, g: 0, b: 0, a: 1}
+    - _Emissive_Color: {r: 1, g: 0, b: 0, a: 1}
     - _FirstShadeMaskColor: {r: 0, g: 1, b: 1, a: 1}
     - _HighColor: {r: 0, g: 0, b: 0, a: 1}
     - _HighlightMaskColor: {r: 1, g: 1, b: 0, a: 1}
@@ -507,7 +508,7 @@ Material:
     - _MatCapColor: {r: 1, g: 1, b: 1, a: 1}
     - _OutlineMaskColor: {r: 0, g: 0, b: 0, a: 1}
     - _Outline_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _RimLightColor: {r: 1, g: 1, b: 1, a: 1}
+    - _RimLightColor: {r: 0.5283019, g: 0.29156286, b: 0.29156286, a: 1}
     - _RimLightMaskColor: {r: 1, g: 0, b: 1, a: 1}
     - _SecondShadeMaskColor: {r: 0, g: 0, b: 1, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}

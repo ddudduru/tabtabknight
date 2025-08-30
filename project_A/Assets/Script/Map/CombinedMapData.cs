@@ -78,6 +78,7 @@ public enum ItemType
     Forward, // 포워드 아이템
     Coin,    // 코인 아이템
     Magnet,  // 자석 아이템
+    Heart,  // 하트 아이템
     Random   // 런타임에 랜덤으로 결정 (Skill, Forward, Coin 중 하나)
 }
 
