@@ -22,6 +22,7 @@ public class MapController : MonoBehaviour
     public GameObject[] treePrefabs;          // 나무 프리팹 리스트
     public GameObject logPrefab;              // 통나무 프리팹
     public GameObject rockPrefab;             // 바위 프리팹
+    public GameObject fallingRockPrefab;      // 낙석 프리팹
 
     [Header("Grid Spacing")]
     public float cellSizeX = 3f;
@@ -207,11 +208,15 @@ public class MapController : MonoBehaviour
                         case ObstacleType.Rock:
                             prefab = rockPrefab;
                             break;
+                        case ObstacleType.FallingRock:
+                            prefab = fallingRockPrefab;
+                            break;
                         case ObstacleType.Random:
-                            int rO = Random.Range(0, 3);
+                            int rO = Random.Range(0, (int)ObstacleType.Random-1);
                             prefab = (rO == 0) ? treePrefabs[Random.Range(0, treePrefabs.Length)]
                                  : (rO == 1) ? logPrefab
-                                 : rockPrefab;
+                                 : (rO == 2) ? rockPrefab
+                                 : fallingRockPrefab;
                             break;
                     }
 
@@ -224,6 +229,15 @@ public class MapController : MonoBehaviour
                             spawnObstacle.transform.position = spawnPos;
                             spawnObstacle.transform.rotation = Quaternion.identity;
                             spawnObstacle.tag = ConstData.ObstacleTag;
+
+                            if(oType == ObstacleType.FallingRock)
+                            {
+                                var fr = spawnObstacle.GetComponent<FallingRockObstacle>();
+                                if (fr != null)
+                                {
+                                    fr.SpawnInit(spawnPos); // ← ground point 전달
+                                }
+                            }
                         }
                     }
                 }

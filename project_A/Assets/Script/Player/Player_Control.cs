@@ -69,6 +69,16 @@ public class Player_Control : MonoBehaviour
     private bool isDizzy;
     private bool isHit;
 
+    [Header("Z Hold / Recovery")]
+    [SerializeField] private bool zRecoveryEnabled = true;
+    [SerializeField] private float initialZ = 0f;          // captured at start
+    [SerializeField] private float zReturnSpeed = 6f;      // units/sec when correcting
+    [SerializeField] private float zStartOffset = 0.06f;   // start correcting if |Δz| > this
+    [SerializeField] private float zStopOffset = 0.01f;   // stop (snap) if |Δz| <= this
+    [SerializeField] private float zKP = 8f;      // 1/sec, tune as needed
+    [SerializeField] private float zMaxCorrSpeed = 10f;
+    private bool zRecoverActive = false;
+
     [Header("UI / Effects")]
     [SerializeField] private GameObject scoreUpPrefab;
     [SerializeField] private TextMeshProUGUI staminaText;
@@ -92,6 +102,9 @@ public class Player_Control : MonoBehaviour
         // HP 초기화
         CurrentHP = maxHP;
 
+        // capture initial Z
+        initialZ = transform.position.z;
+
         // SkillController �ʱ�ȭ �� ���
         skillController = gameObject.AddComponent<SkillController>();
         RegisterSkills();
@@ -101,11 +114,16 @@ public class Player_Control : MonoBehaviour
     {
         HandleInput();
         UpdateTimers();
-        HandleDizzyState();
-        HandleMovement();
+        
         HandleAttackRaycast();
         HandleHpRegen();
         UpdateUI();
+    }
+    private void FixedUpdate()
+    {
+        UpdateZReturnState();
+        HandleDizzyState();
+        HandleMovement();
     }
 
     public void TakeDamage(float damage, float addDizzyGain = 0f)
@@ -123,6 +141,45 @@ public class Player_Control : MonoBehaviour
 
         isHit = true;
         Invoke(nameof(ResetHit), 0.1f);
+    }
+
+    private void UpdateZReturnState()
+    {
+        if (!zRecoveryEnabled)
+        {
+            zRecoverActive = false;
+            return;
+        }
+
+        float dz = initialZ - transform.position.z;
+        float adz = Mathf.Abs(dz);
+
+        if (!zRecoverActive)
+        {
+            // start only if we deviate beyond start offset
+            if (adz > zStartOffset)
+            {
+                zRecoverActive = true;
+            }
+        }
+        else
+        {
+            // stop (and snap) when we are close enough
+            if (adz <= zStopOffset)
+            {
+                zRecoverActive = false;
+
+                // snap to exact plane to avoid micro drift
+                Vector3 p = transform.position;
+                p.z = initialZ;
+                transform.position = p;
+
+                // also nullify any tiny z velocity leftover
+                Vector3 v = rigidbodyComponent.linearVelocity;
+                v.z = 0f;
+                rigidbodyComponent.linearVelocity = v;
+            }
+        }
     }
 
     #region Input Handling
@@ -221,24 +278,32 @@ public class Player_Control : MonoBehaviour
 
     #region Movement
 
-    private void HandleMovement()
+private void HandleMovement()
+{
+    if (isDizzy) { return; }
+
+    currentAcceleration = Mathf.Min(currentAcceleration + Time.deltaTime * 4f, maxAcceleration);
+
+    if (forwardActive > 0)
     {
-        if (isDizzy) return;
-
-        currentAcceleration = Mathf.Min(currentAcceleration + Time.deltaTime * 4f, maxAcceleration);
-
-        if (forwardActive > 0)
-        {
-            forwardActive -= Time.deltaTime;
-            MapController.SetWorldSpeed(3f);
-        }
-
-        Vector3 lateralVelocity = new Vector3(moveDirection * currentAcceleration, 0f, 0f);
-        Vector3 baseVelocity = Vector3.zero; // ���� ��� �ӵ� �ݿ��� �ʿ��ϸ� ����
-
-        rigidbodyComponent.linearVelocity = lateralVelocity + baseVelocity;
-        animator.SetBool("move_dir", moveDirection == 1);
+        forwardActive -= Time.deltaTime;
+        MapController.SetWorldSpeed(3f);
     }
+
+    Vector3 lateralVelocity = new Vector3(moveDirection * currentAcceleration, 0f, 0f);
+
+    // base velocity reserved — use it for Z correction only
+    float zCorr = 0f;
+    float dz = initialZ - transform.position.z;
+
+    zCorr = Mathf.Clamp(dz * zKP, -zMaxCorrSpeed, zMaxCorrSpeed);
+
+    Vector3 baseVelocity = new Vector3(0f, 0f, zCorr);
+
+    rigidbodyComponent.linearVelocity = lateralVelocity + baseVelocity;
+    animator.SetBool("move_dir", moveDirection == 1);
+}
+
 
     #endregion
 

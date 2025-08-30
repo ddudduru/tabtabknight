@@ -63,7 +63,9 @@ public enum ObstacleType
     Tree,    // 나무
     Log,     // 통나무
     Rock,    // 바위
-    Random   // 런타임에 랜덤으로 결정 (Tree, Log, Rock 중 하나)
+    FallingRock,
+    Random,   // 런타임에 랜덤으로 결정 (Tree, Log, Rock 중 하나)
+    End,
 }
 
 // ---------------------------------------------------

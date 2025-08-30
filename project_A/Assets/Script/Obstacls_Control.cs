@@ -5,7 +5,7 @@ using static SoundManager;
 
 public class Obstacls_Control : MonoBehaviour
 {
-    public enum Type { Tree, Rock, Log }
+    public enum Type { Tree, Rock, Log , FallingRock }
     public Type type;
 
     [Header("풀링에서 복귀할 때 호출할 콜백")]
@@ -153,5 +153,14 @@ public class Obstacls_Control : MonoBehaviour
         // 중복 호출 방지를 위해 한번만 호출
         OnDespawn?.Invoke();
         OnDespawn = null;
+
+        if(type == Type.FallingRock)
+        {
+            var fr = GetComponent<FallingRockObstacle>();
+            if (fr != null)
+            {
+                fr.Despawn();
+            }
+        }
     }
 }

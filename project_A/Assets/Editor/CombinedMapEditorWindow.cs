@@ -222,6 +222,7 @@ public class CombinedMapEditorWindow : EditorWindow
             case ObstacleType.Tree: return Color.green;
             case ObstacleType.Log: return new Color(0.7f, 0.4f, 0.1f);
             case ObstacleType.Rock: return Color.gray;
+            case ObstacleType.FallingRock: return Color.magenta;
             case ObstacleType.Random: return Color.yellow;
             default: return Color.white;
         }

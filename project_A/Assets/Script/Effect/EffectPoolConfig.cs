@@ -7,6 +7,7 @@ public enum EffectPoolKind
     ExplosionVFX,
     AreaAttackVFX,
     MagnetAuraVFX,
+    WarningCircle,
     // 필요 시 더 추가
 }
 

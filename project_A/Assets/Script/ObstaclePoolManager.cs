@@ -8,14 +8,16 @@ public class ObstaclePoolManager : MonoBehaviour
     public static ObstaclePoolManager Instance { get; private set; }
 
     [Header("풀링할 오브젝트 프리팹")]
-    public GameObject treePrefab;   // Tree 타입 Prefab
+    public GameObject[] treesPrefab;   // Tree 타입 Prefab
     public GameObject rockPrefab;   // Rock 타입 Prefab
     public GameObject logPrefab;    // Log 타입 Prefab
+    public GameObject fallingRockPrefab;    // Log 타입 Prefab
 
     // 내부에서 실제로 관리하는 풀(Queue)
     private Queue<Obstacls_Control> treePool = new Queue<Obstacls_Control>();
     private Queue<Obstacls_Control> rockPool = new Queue<Obstacls_Control>();
     private Queue<Obstacls_Control> logPool = new Queue<Obstacls_Control>();
+    private Queue<Obstacls_Control> fallingRockPool = new Queue<Obstacls_Control>();
 
     private void Awake()
     {
@@ -50,7 +52,8 @@ public class ObstaclePoolManager : MonoBehaviour
                 }
                 else
                 {
-                    GameObject go = Instantiate(treePrefab);
+                    int randIndex = UnityEngine.Random.Range(0, treesPrefab.Length);
+                    GameObject go = Instantiate(treesPrefab[randIndex]);
                     result = go.GetComponent<Obstacls_Control>();
                 }
                 break;
@@ -79,6 +82,22 @@ public class ObstaclePoolManager : MonoBehaviour
                     GameObject go = Instantiate(logPrefab);
                     result = go.GetComponent<Obstacls_Control>();
                 }
+                break;
+
+            case ObstacleType.FallingRock:
+                if (fallingRockPool.Count > 0)
+                {
+                    result = fallingRockPool.Dequeue();
+                    result.gameObject.SetActive(true);
+                }
+                else
+                {
+                    GameObject go = Instantiate(fallingRockPrefab);
+                    result = go.GetComponent<Obstacls_Control>();
+                }
+                break;
+            default:
+                Debug.Log("a");
                 break;
         }
 
@@ -109,6 +128,9 @@ public class ObstaclePoolManager : MonoBehaviour
                 break;
             case Obstacls_Control.Type.Log:
                 logPool.Enqueue(obst);
+                break;
+            case Obstacls_Control.Type.FallingRock:
+                fallingRockPool.Enqueue(obst);
                 break;
         }
     }
