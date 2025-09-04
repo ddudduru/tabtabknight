@@ -1,0 +1,11 @@
+{
+    "asset": "a9115da54b0aadd46adae20b057d91c5",
+    "fileName": "0198fe9f-b3b9-7332-8bc5-a45d27172933.pose.json",
+    "prompt": "Sit cross-legged",
+    "negativePrompt": "",
+    "model": "a9c27ca4-3ec9-43e8-96cd-ee891aba64c5",
+    "modelName": "Text to Motion",
+    "customSeed": 260397527,
+    "w3CTraceId": "033725cf69fa4f5e76144f9eac0cbabb",
+    "isTrimmed": false
+}

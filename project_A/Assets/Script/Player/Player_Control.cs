@@ -117,6 +117,11 @@ public class Player_Control : MonoBehaviour
 
     private void Update()
     {
+        if (!GameManager.instance.isStart)
+        {
+            return;
+        }
+
         HandleInput();
         UpdateTimers();
         
@@ -126,6 +131,11 @@ public class Player_Control : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        if (!GameManager.instance.isStart)
+        {
+            return;
+        }
+
         UpdateZReturnState();
         HandleDizzyState();
         HandleMovement();

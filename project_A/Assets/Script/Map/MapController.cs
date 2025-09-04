@@ -90,6 +90,11 @@ public class MapController : MonoBehaviour
 
     private void Update()
     {
+        if (!GameManager.instance.isStart)
+        {
+            return;
+        }
+
         if (progress == null)
             return;
 

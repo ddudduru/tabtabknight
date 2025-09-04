@@ -1,0 +1,11 @@
+{
+    "asset": "a9115da54b0aadd46adae20b057d91c5",
+    "fileName": "0198fea2-adf8-7be1-9751-2251c09908dd.pose.json",
+    "prompt": "Sit cross-legged, stare forward ",
+    "negativePrompt": "",
+    "model": "a9c27ca4-3ec9-43e8-96cd-ee891aba64c5",
+    "modelName": "Text to Motion",
+    "customSeed": 374193370,
+    "w3CTraceId": "d04f48ef0aa36a363b1078a5bf310b2f",
+    "isTrimmed": false
+}

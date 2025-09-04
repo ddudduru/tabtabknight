@@ -1,0 +1,11 @@
+{
+    "asset": "a9115da54b0aadd46adae20b057d91c5",
+    "fileName": "0198feab-7637-7c69-b108-07781bcd85bf.pose.json",
+    "prompt": "2-head proportion character, sitting on the ground, legs fully extended, loop motion, simple,",
+    "negativePrompt": "",
+    "model": "a9c27ca4-3ec9-43e8-96cd-ee891aba64c5",
+    "modelName": "Text to Motion",
+    "customSeed": 2013026375,
+    "w3CTraceId": "b98623c3306f156783b86b8a705696a1",
+    "isTrimmed": false
+}

@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
 
     public int gameLevel = 1;
 
+    public bool isStart = false;
+
     private void Awake()
     {
         instance = this;

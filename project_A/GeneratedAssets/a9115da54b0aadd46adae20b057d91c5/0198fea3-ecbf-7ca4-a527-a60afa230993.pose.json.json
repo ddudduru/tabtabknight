@@ -1,0 +1,11 @@
+{
+    "asset": "a9115da54b0aadd46adae20b057d91c5",
+    "fileName": "0198fea3-ecbf-7ca4-a527-a60afa230993.pose.json",
+    "prompt": "Sit on ground with, stare forward ",
+    "negativePrompt": "",
+    "model": "a9c27ca4-3ec9-43e8-96cd-ee891aba64c5",
+    "modelName": "Text to Motion",
+    "customSeed": 1973653883,
+    "w3CTraceId": "6d1aea682466fb68f44b2421e3ef3a93",
+    "isTrimmed": false
+}

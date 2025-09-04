@@ -43,7 +43,6 @@ public class UI_Control : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        gameLevelText.transform.parent.GetComponent<Animator>().SetTrigger("doSlide");
 
         skillPanel.SetActive(false);
     }

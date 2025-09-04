@@ -82,6 +82,11 @@ public class LevelProgressManager3D : MonoBehaviour
 
     void Update()
     {
+        if (!GameManager.instance.isStart)
+        {
+            return;
+        }
+
         if (finished || dead) return;
 
         float curSpeed = CurrentSpeed;            // ★ 여기만 바꾸면 됨

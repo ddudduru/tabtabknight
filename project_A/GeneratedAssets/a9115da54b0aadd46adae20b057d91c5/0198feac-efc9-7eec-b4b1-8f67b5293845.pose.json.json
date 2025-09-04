@@ -1,0 +1,11 @@
+{
+    "asset": "a9115da54b0aadd46adae20b057d91c5",
+    "fileName": "0198feac-efc9-7eec-b4b1-8f67b5293845.pose.json",
+    "prompt": "2-head proportion character, sitting on the ground, legs fully extended, loop, simple, no target finger, hand on knee, stare forward",
+    "negativePrompt": "",
+    "model": "a9c27ca4-3ec9-43e8-96cd-ee891aba64c5",
+    "modelName": "Text to Motion",
+    "customSeed": 1042325627,
+    "w3CTraceId": "f6af1a5250810fee7b125a459368966d",
+    "isTrimmed": false
+}

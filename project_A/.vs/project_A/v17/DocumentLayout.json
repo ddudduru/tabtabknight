@@ -3,11 +3,55 @@
   "WorkspaceRootPath": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|c:\\users\\\uC774\uC9C0\uC778\\documents\\github\\tabtabknight\\project_a\\assets\\script\\item\\hearthealeffectso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|c:\\users\\\uC774\uC9C0\uC778\\documents\\github\\tabtabknight\\project_a\\assets\\script\\stage\\startsequencecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\stage\\startsequencecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|c:\\users\\\uC774\uC9C0\uC778\\documents\\github\\tabtabknight\\project_a\\assets\\script\\camera\\cameratransitioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\camera\\cameratransitioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\assets\\script\\player\\homeplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\homeplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\assets\\script\\camera\\homecamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\camera\\homecamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\assets\\script\\map\\levelprogressmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\map\\levelprogressmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\assets\\script\\ui_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\ui_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\assets\\script\\player\\player_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\player_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\assets\\script\\map\\mapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\map\\mapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\assets\\script\\itemspanwer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\itemspanwer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\assets\\script\\enemypoolmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\enemypoolmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\assets\\script\\item\\hearthealeffectso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\item\\hearthealeffectso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|c:\\users\\\uC774\uC9C0\uC778\\documents\\github\\tabtabknight\\project_a\\assets\\script\\item\\magneteffectso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\assets\\script\\item\\magneteffectso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\item\\magneteffectso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -39,16 +83,8 @@
       "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\objectpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\assets\\script\\player\\player_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\player_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{915C7A56-98AD-326E-4D83-64FBEB5C356A}|Assembly-CSharp-Editor.csproj|C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\assets\\editor\\combinedmapeditorwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{915C7A56-98AD-326E-4D83-64FBEB5C356A}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\editor\\combinedmapeditorwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\assets\\script\\map\\mapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\map\\mapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\assets\\script\\map\\combinedmapdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -83,14 +119,6 @@
       "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\enemy\\wormbrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\assets\\script\\ui_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\ui_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\assets\\script\\enemypoolmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\enemypoolmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Map\\RaceProgress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\Map\\RaceProgress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -105,10 +133,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\assets\\script\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\assets\\script\\enemy\\defaultforwardbrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -133,10 +157,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AA104034-7942-A8BE-EF09-9E7E9FEF1162}|ProPixelizer.csproj|C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\assets\\propixelizer\\tools\\palette.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AA104034-7942-A8BE-EF09-9E7E9FEF1162}|ProPixelizer.csproj|solutionrelative:assets\\propixelizer\\tools\\palette.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\assets\\script\\itemspanwer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\itemspanwer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9A723657-4D1B-6F14-5598-FB22AC590F13}|Assembly-CSharp.csproj|C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\assets\\script\\animator\\animatorparameter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -254,7 +274,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 26,
               "Title": "Obstacls_Control.cs",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Obstacls_Control.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Obstacls_Control.cs",
@@ -267,20 +287,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 7,
               "Title": "MapController.cs",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Map\\MapController.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Map\\MapController.cs",
               "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Map\\MapController.cs",
               "RelativeToolTip": "Assets\\Script\\Map\\MapController.cs",
-              "ViewState": "AgIAAN0AAAAAAAAAAAAowP8AAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAADwvyQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-26T14:49:54.603Z",
               "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 23,
               "Title": "PeriodicExecution.cs",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Skill\\PeriodicExecution.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Skill\\PeriodicExecution.cs",
@@ -294,353 +314,116 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "HeartHealEffectSo.cs",
-              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\HeartHealEffectSO.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Item\\HeartHealEffectSO.cs",
-              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\HeartHealEffectSO.cs",
-              "RelativeToolTip": "Assets\\Script\\Item\\HeartHealEffectSO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
+              "Title": "StartSequenceController.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Stage\\StartSequenceController.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Stage\\StartSequenceController.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Stage\\StartSequenceController.cs",
+              "RelativeToolTip": "Assets\\Script\\Stage\\StartSequenceController.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAuwHwAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T11:57:40.729Z",
+              "WhenOpened": "2025-09-03T14:29:17.119Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ItemPoolManager.cs",
-              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\ItemPoolManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Item\\ItemPoolManager.cs",
-              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\ItemPoolManager.cs",
-              "RelativeToolTip": "Assets\\Script\\Item\\ItemPoolManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF0AAAAAAAAAAAAAAA==",
+              "Title": "HomePlayer.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Player\\HomePlayer.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Player\\HomePlayer.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Player\\HomePlayer.cs",
+              "RelativeToolTip": "Assets\\Script\\Player\\HomePlayer.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAYwGIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-17T12:50:39.967Z"
+              "WhenOpened": "2025-08-31T14:19:27.613Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MagnetEffectSO.cs",
-              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\MagnetEffectSO.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Item\\MagnetEffectSO.cs",
-              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\MagnetEffectSO.cs",
-              "RelativeToolTip": "Assets\\Script\\Item\\MagnetEffectSO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA8AAAAAAAAAA==",
+              "Title": "CameraTransitionController.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Camera\\CameraTransitionController.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Camera\\CameraTransitionController.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Camera\\CameraTransitionController.cs",
+              "RelativeToolTip": "Assets\\Script\\Camera\\CameraTransitionController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAADwv1UAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T13:51:55.523Z",
+              "WhenOpened": "2025-08-31T13:07:08.935Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ForwardBoostEffectSO.cs",
-              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\ForwardBoostEffectSO.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Item\\ForwardBoostEffectSO.cs",
-              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\ForwardBoostEffectSO.cs",
-              "RelativeToolTip": "Assets\\Script\\Item\\ForwardBoostEffectSO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAoAAAAAAAAAA==",
+              "Title": "HomeCamera.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Camera\\HomeCamera.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Camera\\HomeCamera.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Camera\\HomeCamera.cs",
+              "RelativeToolTip": "Assets\\Script\\Camera\\HomeCamera.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T13:49:19.04Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ScoreEffectSO.cs",
-              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\ScoreEffectSO.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Item\\ScoreEffectSO.cs",
-              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\ScoreEffectSO.cs",
-              "RelativeToolTip": "Assets\\Script\\Item\\ScoreEffectSO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-17T12:57:33.96Z"
+              "WhenOpened": "2025-08-31T13:01:24.62Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "StaminaRestoreEffectSO.cs",
-              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\StaminaRestoreEffectSO.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Item\\StaminaRestoreEffectSO.cs",
-              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\StaminaRestoreEffectSO.cs",
-              "RelativeToolTip": "Assets\\Script\\Item\\StaminaRestoreEffectSO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T13:47:46.789Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Item.cs",
-              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\Item.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Item\\Item.cs",
-              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\Item.cs",
-              "RelativeToolTip": "Assets\\Script\\Item\\Item.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-17T12:40:19.524Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ItemEffectSO.cs",
-              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\ItemEffectSO.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Item\\ItemEffectSO.cs",
-              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\ItemEffectSO.cs",
-              "RelativeToolTip": "Assets\\Script\\Item\\ItemEffectSO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAMAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T13:47:01.132Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Player_Control.cs",
-              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Player\\Player_Control.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Player\\Player_Control.cs",
-              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Player\\Player_Control.cs",
-              "RelativeToolTip": "Assets\\Script\\Player\\Player_Control.cs",
-              "ViewState": "AgIAAL8BAAAAAAAAAAAYwNwBAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-29T15:04:53.587Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CombinedMapData.cs",
-              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Map\\CombinedMapData.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Map\\CombinedMapData.cs",
-              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Map\\CombinedMapData.cs",
-              "RelativeToolTip": "Assets\\Script\\Map\\CombinedMapData.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAiwDoAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T07:02:07.27Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CombinedMapEditorWindow.cs",
-              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Editor\\CombinedMapEditorWindow.cs",
-              "RelativeDocumentMoniker": "Assets\\Editor\\CombinedMapEditorWindow.cs",
-              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Editor\\CombinedMapEditorWindow.cs",
-              "RelativeToolTip": "Assets\\Editor\\CombinedMapEditorWindow.cs",
-              "ViewState": "AgIAAHQAAAAAAAAAAAAgwO8AAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T07:04:00.568Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ObstaclePoolManager.cs",
-              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\ObstaclePoolManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\ObstaclePoolManager.cs",
-              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\ObstaclePoolManager.cs",
-              "RelativeToolTip": "Assets\\Script\\ObstaclePoolManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T17:36:06.125Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ObjectPool.cs",
-              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\ObjectPool.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\ObjectPool.cs",
-              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\ObjectPool.cs",
-              "RelativeToolTip": "Assets\\Script\\ObjectPool.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAgwBQAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T11:09:22.75Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "ConstData.cs",
-              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\ConstData\\ConstData.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\ConstData\\ConstData.cs",
-              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\ConstData\\ConstData.cs",
-              "RelativeToolTip": "Assets\\Script\\ConstData\\ConstData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T06:35:34.336Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "IEnemyBrain.cs",
-              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Enemy\\IEnemyBrain.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Enemy\\IEnemyBrain.cs",
-              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Enemy\\IEnemyBrain.cs",
-              "RelativeToolTip": "Assets\\Script\\Enemy\\IEnemyBrain.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAQAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T08:25:04.685Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "CrabBrain.cs",
-              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Enemy\\CrabBrain.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Enemy\\CrabBrain.cs",
-              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Enemy\\CrabBrain.cs",
-              "RelativeToolTip": "Assets\\Script\\Enemy\\CrabBrain.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T03:40:53.979Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "GhostChargeBrain.cs",
-              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Enemy\\GhostChargeBrain.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Enemy\\GhostChargeBrain.cs",
-              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Enemy\\GhostChargeBrain.cs",
-              "RelativeToolTip": "Assets\\Script\\Enemy\\GhostChargeBrain.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T08:26:13.502Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "DefaultForwardBrain.cs",
-              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Enemy\\DefaultForwardBrain.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Enemy\\DefaultForwardBrain.cs",
-              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Enemy\\DefaultForwardBrain.cs",
-              "RelativeToolTip": "Assets\\Script\\Enemy\\DefaultForwardBrain.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAIAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T08:25:47.959Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "FallingRockObstacle.cs",
-              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Obstacles\\FallingRockObstacle.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Obstacles\\FallingRockObstacle.cs",
-              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Obstacles\\FallingRockObstacle.cs",
-              "RelativeToolTip": "Assets\\Script\\Obstacles\\FallingRockObstacle.cs",
-              "ViewState": "AgIAANQAAAAAAAAAAAAkwOQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-29T16:11:10.155Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "GameManager.cs",
-              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\GameManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\GameManager.cs",
-              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\GameManager.cs",
-              "RelativeToolTip": "Assets\\Script\\GameManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T11:03:45.534Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "WormBrain.cs",
-              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Enemy\\WormBrain.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Enemy\\WormBrain.cs",
-              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Enemy\\WormBrain.cs",
-              "RelativeToolTip": "Assets\\Script\\Enemy\\WormBrain.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAiwAkAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T11:58:11.605Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
               "Title": "UI_Control.cs",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\UI_Control.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\UI_Control.cs",
               "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\UI_Control.cs",
               "RelativeToolTip": "Assets\\Script\\UI_Control.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAYwEAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAtwCwAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-01T06:11:18.031Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "EffectPoolConfig.cs",
-              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Effect\\EffectPoolConfig.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Effect\\EffectPoolConfig.cs",
-              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Effect\\EffectPoolConfig.cs",
-              "RelativeToolTip": "Assets\\Script\\Effect\\EffectPoolConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T10:57:48.595Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Enemy.cs",
-              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Enemy\\Enemy.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Enemy\\Enemy.cs",
-              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Enemy\\Enemy.cs",
-              "RelativeToolTip": "Assets\\Script\\Enemy\\Enemy.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAUwCYAAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T08:24:44.963Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 6,
               "Title": "Player_Control.cs",
-              "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Player_Control.cs",
-              "ToolTip": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Player_Control.cs",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAcwJIAAAAsAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Player\\Player_Control.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Player\\Player_Control.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Player\\Player_Control.cs",
+              "RelativeToolTip": "Assets\\Script\\Player\\Player_Control.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAAwAgAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T13:15:48.437Z"
+              "WhenOpened": "2025-08-29T15:04:53.587Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Map_Control.cs",
-              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Map_Control.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Map_Control.cs",
-              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Map_Control.cs",
-              "RelativeToolTip": "Assets\\Script\\Map_Control.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAYwBsAAAArAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "LevelProgressManager.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Map\\LevelProgressManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Map\\LevelProgressManager.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Map\\LevelProgressManager.cs",
+              "RelativeToolTip": "Assets\\Script\\Map\\LevelProgressManager.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAcwE4AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T11:03:18.6Z"
+              "WhenOpened": "2025-08-31T13:33:23.855Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "PlayerProgressReporter.cs",
-              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Player\\PlayerProgressReporter.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Player\\PlayerProgressReporter.cs",
-              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Player\\PlayerProgressReporter.cs",
-              "RelativeToolTip": "Assets\\Script\\Player\\PlayerProgressReporter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA0AAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\GameManager.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Script\\GameManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T10:56:05.068Z"
+              "WhenOpened": "2025-05-23T11:03:45.534Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "RaceProgress.cs",
-              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Map\\RaceProgress.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Map\\RaceProgress.cs",
-              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Map\\RaceProgress.cs",
-              "RelativeToolTip": "Assets\\Script\\Map\\RaceProgress.cs",
+              "DocumentIndex": 9,
+              "Title": "ItemSpanwer.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\ItemSpanwer.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\ItemSpanwer.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\ItemSpanwer.cs",
+              "RelativeToolTip": "Assets\\Script\\ItemSpanwer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-25T11:00:08.801Z"
+              "WhenOpened": "2025-06-02T06:48:01.189Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "EnemyBrainFactory.cs",
-              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Enemy\\EnemyBrainFactory.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Enemy\\EnemyBrainFactory.cs",
-              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Enemy\\EnemyBrainFactory.cs",
-              "RelativeToolTip": "Assets\\Script\\Enemy\\EnemyBrainFactory.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAswAoAAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T08:25:27.122Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 10,
               "Title": "EnemyPoolManager.cs",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\EnemyPoolManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\EnemyPoolManager.cs",
@@ -652,7 +435,316 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HeartHealEffectSO.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\HeartHealEffectSO.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Item\\HeartHealEffectSO.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\HeartHealEffectSO.cs",
+              "RelativeToolTip": "Assets\\Script\\Item\\HeartHealEffectSO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-30T11:57:40.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ItemPoolManager.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\ItemPoolManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Item\\ItemPoolManager.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\ItemPoolManager.cs",
+              "RelativeToolTip": "Assets\\Script\\Item\\ItemPoolManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T12:50:39.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MagnetEffectSO.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\MagnetEffectSO.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Item\\MagnetEffectSO.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\MagnetEffectSO.cs",
+              "RelativeToolTip": "Assets\\Script\\Item\\MagnetEffectSO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T13:51:55.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ForwardBoostEffectSO.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\ForwardBoostEffectSO.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Item\\ForwardBoostEffectSO.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\ForwardBoostEffectSO.cs",
+              "RelativeToolTip": "Assets\\Script\\Item\\ForwardBoostEffectSO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T13:49:19.04Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ScoreEffectSO.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\ScoreEffectSO.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Item\\ScoreEffectSO.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\ScoreEffectSO.cs",
+              "RelativeToolTip": "Assets\\Script\\Item\\ScoreEffectSO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T12:57:33.96Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "StaminaRestoreEffectSO.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\StaminaRestoreEffectSO.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Item\\StaminaRestoreEffectSO.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\StaminaRestoreEffectSO.cs",
+              "RelativeToolTip": "Assets\\Script\\Item\\StaminaRestoreEffectSO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T13:47:46.789Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Item.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\Item.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Item\\Item.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\Item.cs",
+              "RelativeToolTip": "Assets\\Script\\Item\\Item.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T12:40:19.524Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ItemEffectSO.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\ItemEffectSO.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Item\\ItemEffectSO.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Item\\ItemEffectSO.cs",
+              "RelativeToolTip": "Assets\\Script\\Item\\ItemEffectSO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAMAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T13:47:01.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CombinedMapData.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Map\\CombinedMapData.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Map\\CombinedMapData.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Map\\CombinedMapData.cs",
+              "RelativeToolTip": "Assets\\Script\\Map\\CombinedMapData.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAiwDoAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T07:02:07.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CombinedMapEditorWindow.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Editor\\CombinedMapEditorWindow.cs",
+              "RelativeDocumentMoniker": "Assets\\Editor\\CombinedMapEditorWindow.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Editor\\CombinedMapEditorWindow.cs",
+              "RelativeToolTip": "Assets\\Editor\\CombinedMapEditorWindow.cs",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAgwO8AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T07:04:00.568Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ObstaclePoolManager.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\ObstaclePoolManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\ObstaclePoolManager.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\ObstaclePoolManager.cs",
+              "RelativeToolTip": "Assets\\Script\\ObstaclePoolManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T17:36:06.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ObjectPool.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\ObjectPool.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\ObjectPool.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\ObjectPool.cs",
+              "RelativeToolTip": "Assets\\Script\\ObjectPool.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAgwBQAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T11:09:22.75Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ConstData.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\ConstData\\ConstData.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\ConstData\\ConstData.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\ConstData\\ConstData.cs",
+              "RelativeToolTip": "Assets\\Script\\ConstData\\ConstData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T06:35:34.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "IEnemyBrain.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Enemy\\IEnemyBrain.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Enemy\\IEnemyBrain.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Enemy\\IEnemyBrain.cs",
+              "RelativeToolTip": "Assets\\Script\\Enemy\\IEnemyBrain.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAQAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-09T08:25:04.685Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "CrabBrain.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Enemy\\CrabBrain.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Enemy\\CrabBrain.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Enemy\\CrabBrain.cs",
+              "RelativeToolTip": "Assets\\Script\\Enemy\\CrabBrain.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T03:40:53.979Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "GhostChargeBrain.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Enemy\\GhostChargeBrain.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Enemy\\GhostChargeBrain.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Enemy\\GhostChargeBrain.cs",
+              "RelativeToolTip": "Assets\\Script\\Enemy\\GhostChargeBrain.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-09T08:26:13.502Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "DefaultForwardBrain.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Enemy\\DefaultForwardBrain.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Enemy\\DefaultForwardBrain.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Enemy\\DefaultForwardBrain.cs",
+              "RelativeToolTip": "Assets\\Script\\Enemy\\DefaultForwardBrain.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAIAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-09T08:25:47.959Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "FallingRockObstacle.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Obstacles\\FallingRockObstacle.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Obstacles\\FallingRockObstacle.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Obstacles\\FallingRockObstacle.cs",
+              "RelativeToolTip": "Assets\\Script\\Obstacles\\FallingRockObstacle.cs",
+              "ViewState": "AgIAANQAAAAAAAAAAAAkwOQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T16:11:10.155Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "WormBrain.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Enemy\\WormBrain.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Enemy\\WormBrain.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Enemy\\WormBrain.cs",
+              "RelativeToolTip": "Assets\\Script\\Enemy\\WormBrain.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAiwAkAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T11:58:11.605Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "EffectPoolConfig.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Effect\\EffectPoolConfig.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Effect\\EffectPoolConfig.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Effect\\EffectPoolConfig.cs",
+              "RelativeToolTip": "Assets\\Script\\Effect\\EffectPoolConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T10:57:48.595Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 32,
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Enemy\\Enemy.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Enemy\\Enemy.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Enemy\\Enemy.cs",
+              "RelativeToolTip": "Assets\\Script\\Enemy\\Enemy.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAUwCYAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-09T08:24:44.963Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "Player_Control.cs",
+              "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Player_Control.cs",
+              "ToolTip": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Player_Control.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAcwJIAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T13:15:48.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Map_Control.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Map_Control.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Map_Control.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Map_Control.cs",
+              "RelativeToolTip": "Assets\\Script\\Map_Control.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAYwBsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T11:03:18.6Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "PlayerProgressReporter.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Player\\PlayerProgressReporter.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Player\\PlayerProgressReporter.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Player\\PlayerProgressReporter.cs",
+              "RelativeToolTip": "Assets\\Script\\Player\\PlayerProgressReporter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T10:56:05.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "RaceProgress.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Map\\RaceProgress.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Map\\RaceProgress.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Map\\RaceProgress.cs",
+              "RelativeToolTip": "Assets\\Script\\Map\\RaceProgress.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T11:00:08.801Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "EnemyBrainFactory.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Enemy\\EnemyBrainFactory.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Enemy\\EnemyBrainFactory.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Enemy\\EnemyBrainFactory.cs",
+              "RelativeToolTip": "Assets\\Script\\Enemy\\EnemyBrainFactory.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAswAoAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-09T08:25:27.122Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
               "Title": "Palette.cs",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\ProPixelizer\\Tools\\Palette.cs",
               "RelativeDocumentMoniker": "Assets\\ProPixelizer\\Tools\\Palette.cs",
@@ -664,7 +756,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 39,
               "Title": "AnimatorParameter.cs",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Animator\\AnimatorParameter.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Animator\\AnimatorParameter.cs",
@@ -676,7 +768,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 63,
               "Title": "Item.cs",
               "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Item.cs",
               "ToolTip": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Item.cs",
@@ -686,7 +778,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 40,
               "Title": "PixelizedWithOutline.shader",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\ProPixelizer\\SRP\\PixelizedWithOutline.shader",
               "RelativeDocumentMoniker": "Assets\\ProPixelizer\\SRP\\PixelizedWithOutline.shader",
@@ -698,7 +790,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 42,
               "Title": "ProPixelizerVerification.cs",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\ProPixelizer\\Tools\\Package\\ProPixelizerVerification.cs",
               "RelativeDocumentMoniker": "Assets\\ProPixelizer\\Tools\\Package\\ProPixelizerVerification.cs",
@@ -710,7 +802,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 41,
               "Title": "ProPixelizerBaseGUI.cs",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\ProPixelizer\\ShaderGraph\\ProPixelizerBaseGUI.cs",
               "RelativeDocumentMoniker": "Assets\\ProPixelizer\\ShaderGraph\\ProPixelizerBaseGUI.cs",
@@ -722,7 +814,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 43,
               "Title": "PooledEffectBehavior.cs",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Effect\\PooledEffectBehavior.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Effect\\PooledEffectBehavior.cs",
@@ -734,7 +826,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 44,
               "Title": "SkillController.cs",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Skill\\SkillController.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Skill\\SkillController.cs",
@@ -746,7 +838,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 45,
               "Title": "FollowExecution.cs",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Skill\\FollowExecution.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Skill\\FollowExecution.cs",
@@ -758,7 +850,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 46,
               "Title": "IExecutionStrategy.cs",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Skill\\IExecutionStrategy.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Skill\\IExecutionStrategy.cs",
@@ -770,7 +862,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 47,
               "Title": "CompositeSkill.cs",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Skill\\CompositeSkill.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Skill\\CompositeSkill.cs",
@@ -782,7 +874,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 48,
               "Title": "SkillBase.cs",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Skill\\SkillBase.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Skill\\SkillBase.cs",
@@ -794,7 +886,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 49,
               "Title": "SingleExecution.cs",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Skill\\SingleExecution.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Skill\\SingleExecution.cs",
@@ -806,7 +898,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 50,
               "Title": "AreaDamageEffect.cs",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Skill\\AreaDamageEffect.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Skill\\AreaDamageEffect.cs",
@@ -818,7 +910,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 53,
               "Title": "IContinuousEffectStrategy.cs",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Skill\\IContinuousEffectStrategy.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Skill\\IContinuousEffectStrategy.cs",
@@ -830,7 +922,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 52,
               "Title": "ExplosionEffect.cs",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Skill\\ExplosionEffect.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Skill\\ExplosionEffect.cs",
@@ -842,7 +934,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 51,
               "Title": "DashEffect.cs",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Skill\\DashEffect.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Skill\\DashEffect.cs",
@@ -854,7 +946,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 54,
               "Title": "NearestEnemyDashEffect.cs",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Skill\\NearestEnemyDashEffect.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Skill\\NearestEnemyDashEffect.cs",
@@ -866,7 +958,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 55,
               "Title": "AreaTargetsAroundOwner.cs",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Skill\\AreaTargetsAroundOwner.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Skill\\AreaTargetsAroundOwner.cs",
@@ -878,7 +970,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 56,
               "Title": "NearestEnemyTargeting.cs",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Skill\\NearestEnemyTargeting.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Skill\\NearestEnemyTargeting.cs",
@@ -890,7 +982,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 57,
               "Title": "ITargetingStrategy.cs",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Skill\\ITargetingStrategy.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Skill\\ITargetingStrategy.cs",
@@ -902,7 +994,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 58,
               "Title": "IEffectStrategy.cs",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Skill\\IEffectStrategy.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Skill\\IEffectStrategy.cs",
@@ -914,7 +1006,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 59,
               "Title": "EffectPoolManager.cs",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Effect\\EffectPoolManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Effect\\EffectPoolManager.cs",
@@ -926,19 +1018,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "ItemSpanwer.cs",
-              "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\ItemSpanwer.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\ItemSpanwer.cs",
-              "ToolTip": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\ItemSpanwer.cs",
-              "RelativeToolTip": "Assets\\Script\\ItemSpanwer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T06:48:01.189Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 60,
               "Title": "StaticPositionTargeting.cs",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\Skill\\StaticPositionTargeting.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Skill\\StaticPositionTargeting.cs",
@@ -950,7 +1030,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 61,
               "Title": "EffectRecyclable.cs",
               "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Effect\\EffectRecyclable.cs",
               "ToolTip": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\Effect\\EffectRecyclable.cs",
@@ -960,7 +1040,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 62,
               "Title": "SoundManager.cs",
               "DocumentMoniker": "C:\\Users\\\uC774\uC9C0\uC778\\Documents\\GitHub\\tabtabknight\\project_A\\Assets\\Script\\SoundManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\SoundManager.cs",
@@ -972,7 +1052,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 64,
               "Title": "ItemPoolManager.cs",
               "DocumentMoniker": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\ItemPoolManager.cs",
               "ToolTip": "D:\\Unity\\Project\\tabtabknight\\project_A\\Assets\\Script\\ItemPoolManager.cs",
