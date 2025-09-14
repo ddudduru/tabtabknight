@@ -7,13 +7,25 @@ public class UI_Control : MonoBehaviour
 {
     public static UI_Control instance;
 
+
+    [Header("Home UI")]
+    [SerializeField] public GameObject homeUiPanel;
+    [SerializeField] public Button startButton;
+
+
     [Header("Dizzy UI")]
     [SerializeField] private GameObject dizzyPanel;
     [SerializeField] private TextMeshProUGUI dizzyText;
 
-    [Header("Dizzy UI")]
+    [Header("Player UI")]
+    [SerializeField] public GameObject PlayerUI;
+    [Header("Player UI -> Hp UI")]
     [SerializeField] private GameObject HpPanel;
     [SerializeField] private Image hpFrontImage;
+
+    [Header("Player UI -> Skill UI")]
+    [SerializeField] private GameObject skillPanel;
+    [SerializeField] private Image skillTimeImage;
 
     [Header("Score UI")]
     [SerializeField] private TextMeshProUGUI scoreText;
@@ -22,13 +34,15 @@ public class UI_Control : MonoBehaviour
     [SerializeField] private TextMeshProUGUI gameLevelText;
     [SerializeField] private TextMeshProUGUI finishScoreText;
 
-    [Header("Skill UI")]
-    [SerializeField] private GameObject skillPanel;
-    [SerializeField] private Image skillTimeImage;
-
     [Header("Panels")]
     [SerializeField] private GameObject optionPanel;
-    [SerializeField] private GameObject finishPanel;
+
+    [Header("Result UI")]
+    [SerializeField] public GameObject resultUiPanel;
+    [SerializeField] public TextMeshProUGUI resultText;
+    [SerializeField] public Button retryButton;
+    [SerializeField] public Button nextButton;
+    [SerializeField] public Button homeButton;
 
     [Header("Stamina UI")]
     [SerializeField] private Image staminaImage;
@@ -127,7 +141,7 @@ public class UI_Control : MonoBehaviour
     {
         SoundManager.instance.Play_SoundEffect(SoundManager.SoundType.Effect_Button_Click);
         Time.timeScale = 0f;
-        finishPanel.SetActive(true);
+        resultUiPanel.SetActive(true);
         finishScoreText.text = scoreText.text;
     }
 
@@ -148,6 +162,14 @@ public class UI_Control : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void SetActivePlayerUI(bool isActive)
+    {
+        if (PlayerUI != null)
+        {
+            PlayerUI.SetActive(isActive);
+        }
     }
 
     public void ClickOption()

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456adac4e8d673e4193e0faaa236e990, type: 3}
+  m_Name: Chapter_1
+  m_EditorClassIdentifier: Assembly-CSharp::ChapterDataSO
+  chapterId: 1
+  displayName: "\uCC55\uD1301"
+  description: "\uC804\uC124\uC758 \uC2DC\uC791"
+  bgm: {fileID: 0}
+  thumbnail: {fileID: 0}
+  stages:
+  - {fileID: 11400000, guid: d0e8c50b2ff357a40951d93e369a27db, type: 2}
+  - {fileID: 11400000, guid: 6067417cdf862a842941561b163db9e9, type: 2}
+  - {fileID: 11400000, guid: ef9dd0412e06fd14fa171277938765dc, type: 2}
+  - {fileID: 11400000, guid: 42e97b35a069ff340b47a39608a9f82d, type: 2}

@@ -24,20 +24,28 @@ public class Player_Control : MonoBehaviour
     [SerializeField] public float maxHP = 100f;
     [SerializeField] private float currentHpInternal;
 
+    public bool IsDead {  get; set; }
     /// <summary>
     /// HP 프로퍼티: 감소 시 0 이하로 떨어지면 자동 종료
     /// </summary>
     public float CurrentHP
     {
         get => currentHpInternal;
-        private set
+        set
         {
             currentHpInternal = Mathf.Clamp(value, 0f, maxHP);
 
             if (currentHpInternal <= 0f)
             {
                 // 게임 종료 처리
-                UI_Control.instance.FinishGame();
+                if (!IsDead)
+                {
+                    Dead();
+                }
+            }
+            else
+            {
+                IsDead = false;
             }
         }
     }
@@ -100,12 +108,7 @@ public class Player_Control : MonoBehaviour
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
 
-        currentStamina = maxStamina;
-        currentAcceleration = initialAcceleration;
-        forwardActive = 0;
-
-        // HP 초기화
-        CurrentHP = maxHP;
+        InitPlayerSetting();
 
         // capture initial Z
         initialZ = transform.position.z;
@@ -113,6 +116,49 @@ public class Player_Control : MonoBehaviour
         // SkillController �ʱ�ȭ �� ���
         skillController = gameObject.AddComponent<SkillController>();
         RegisterSkills();
+    }
+
+
+    public void InitPlayerSetting()
+    {
+        dizzyTimer = 0f;
+        moveDirection = 1;
+        IsDead = false;
+        CurrentHP = maxHP;
+        currentStamina = maxStamina;
+        currentAcceleration = initialAcceleration;
+        forwardActive = 0;
+
+        transform.position = new Vector3(0f, 0f, -10f);
+
+        if (animator != null)
+        {
+            animator.SetBool("isDead", false);
+        }
+
+        if (rigidbodyComponent != null)
+        {
+            rigidbodyComponent.isKinematic = false;
+        }
+
+        UI_Control.instance.SetActivePlayerUI(true);
+    }
+
+    public void Dead()
+    {
+        IsDead = true;
+        if (animator != null)
+        {
+            animator.SetTrigger("doDie");
+            animator.SetBool("isDead", true);
+        }
+
+        if (rigidbodyComponent != null)
+        {
+            rigidbodyComponent.isKinematic = true;
+        }
+        UI_Control.instance.SetActivePlayerUI(false);
+        GameStateMachine.Instance.OnStageResult(false);
     }
 
     private void Update()
@@ -289,6 +335,7 @@ public class Player_Control : MonoBehaviour
         skillRange.enabled = false;
     }
 
+
     #endregion
 
     #region Movement
@@ -296,6 +343,12 @@ public class Player_Control : MonoBehaviour
 private void HandleMovement()
 {
     if (isDizzy) { return; }
+
+    if(GameStateMachine.Instance._current is not StageState)
+    {
+        rigidbodyComponent.linearVelocity = new Vector3(0f, 0f, 0f);
+        return;
+    }
 
     currentAcceleration = Mathf.Min(currentAcceleration + Time.deltaTime * 4f, maxAcceleration);
 
@@ -452,7 +505,7 @@ private void HandleMovement()
         }
         else if (other.CompareTag(ConstData.DeadZoneTag))
         {
-            UI_Control.instance.FinishGame();
+            Dead();
         }
     }
 
@@ -520,7 +573,6 @@ private void HandleMovement()
         if (isHit) return;
 
         isAttacking = false;
-        animator.SetTrigger("doDizzy");
         hitObstacleEffect.Play();
 
         float dizzyGain = 0f;

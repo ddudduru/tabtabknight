@@ -9,6 +9,8 @@ using UnityEngine;
 /// </summary>
 public class LevelProgressManager3D : MonoBehaviour
 {
+    public static LevelProgressManager3D Instance { get; private set; }
+
     [Header("필수 참조")]
     [SerializeField] Transform player;         // 고정 주인공
     [SerializeField] Transform deadZone;       // 빨간선(즉사)
@@ -32,50 +34,135 @@ public class LevelProgressManager3D : MonoBehaviour
     [SerializeField] bool hideGoalBeforeAppear = true;     // 나타나기 전 결승선 숨김
 
     // 런타임 상태
-    public float distanceTraveled { get; private set; } = 0f; // 누적 진행거리
-                                                              // LevelProgressManager3D.cs 안에 추가
-                                                              // 1) 옵션 토글 추가 (원하면 인스펙터에서 끄고 켤 수 있도록)
-    [SerializeField] bool freezeWorldOnDizzy = true;
+    public float distanceTraveled { get; private set; } = 0f;
 
-    // 2) 현재 속도 프로퍼티 추가/수정
+    [SerializeField] bool freezeWorldOnDizzy = true;       // 기절 시 월드 정지 여부
+
+    // 현재 속도
     public float CurrentSpeed
     {
         get
         {
-            // 기절 중엔 완전 정지
-            if (freezeWorldOnDizzy && Player_Control.Instance && Player_Control.Instance.IsDizzy)
+            // 기절 중 완전 정지 옵션
+            if (freezeWorldOnDizzy && Player_Control.Instance != null && Player_Control.Instance.IsDizzy)
+            {
                 return 0f;
+            }
 
             float cur = baseMoveSpeed;
-            // (freezeWorldOnDizzy를 끈 경우엔 느려지게만 하고 싶다면 아래 줄 사용)
-            if (Player_Control.Instance && Player_Control.Instance.IsDizzy)
+
+            // 정지 옵션을 끈 경우엔 느려지게만
+            if (Player_Control.Instance != null && Player_Control.Instance.IsDizzy)
+            {
                 cur *= dizzySpeedFactor;
+            }
             return cur;
         }
     }
+
     // 맵이 흘러야 하는 방향(플레이어 전진축의 반대)
     public Vector3 ScrollDir => -Fwd; // Fwd는 (movementDir.normalized)
 
-    float deadGap;                    // 플레이어와 데드존 간 "스칼라" 간격(월드 단위, 항상 양수)
+    float deadGap;                    // 플레이어와 데드존 간 스칼라 간격(항상 양수)
     bool finished = false;
-    bool dead = false;
 
     // 전진축 노멀
     Vector3 Fwd => (movementDir.sqrMagnitude > 1e-6f) ? movementDir.normalized : Vector3.forward;
+
+    // ========== 새로 추가: 스테이지 리셋 API ==========
+    /// <summary>
+    /// 스테이지 시작/재시작/다음 스테이지 진입 시 호출.
+    /// 전달한 값이 있으면 해당 파라미터를 덮어쓰고, null이면 기존 값 유지.
+    /// - 맵/오브젝트 스크롤은 MapController가 담당 (여기선 진행도/데드존/골만 리셋)
+    /// </summary>
+
+    public void ResetForStage(StageMapDataSO data)
+    {
+        if (data == null)
+        {
+            // SO가 없으면 기존 값 유지 초기화
+            ResetForStage(null, null, null, null, null, null, null);
+            return;
+        }
+
+        ResetForStage(
+            newTargetDistance: data.targetDistance,
+            newBaseMoveSpeed: data.baseMoveSpeed,
+            newDeadZoneSpeed: data.deadZoneSpeed,
+            newGoalAppearAt: data.goalAppearAt,
+            newGoalVisibleAhead: data.goalVisibleAhead,
+            newInitialDeadGap: data.initialDeadGap,
+            newHideGoalBeforeAppear: data.hideGoalBeforeAppear
+        );
+    }
+
+    public void ResetForStage(
+        float? newTargetDistance = null,
+        float? newBaseMoveSpeed = null,
+        float? newDeadZoneSpeed = null,
+        float? newGoalAppearAt = null,
+        float? newGoalVisibleAhead = null,
+        float? newInitialDeadGap = null,
+        bool? newHideGoalBeforeAppear = null
+    )
+    {
+        // 1) 파라미터 오버라이드
+        if (newTargetDistance.HasValue) { targetDistance = Mathf.Max(0f, newTargetDistance.Value); }
+        if (newBaseMoveSpeed.HasValue) { baseMoveSpeed = Mathf.Max(0f, newBaseMoveSpeed.Value); }
+        if (newDeadZoneSpeed.HasValue) { deadZoneSpeed = Mathf.Max(0f, newDeadZoneSpeed.Value); }
+        if (newGoalAppearAt.HasValue)  { goalAppearAt = Mathf.Clamp01(newGoalAppearAt.Value); }
+        if (newGoalVisibleAhead.HasValue) { goalVisibleAhead = Mathf.Max(0f, newGoalVisibleAhead.Value); }
+        if (newInitialDeadGap.HasValue) { initialDeadGap = Mathf.Max(0f, newInitialDeadGap.Value); }
+        if (newHideGoalBeforeAppear.HasValue) { hideGoalBeforeAppear = newHideGoalBeforeAppear.Value; }
+
+        // 2) 런타임 값 리셋
+        finished = false;
+        distanceTraveled = 0f;
+        deadGap = Mathf.Max(0f, initialDeadGap);
+
+        // 3) 데드존/골 초기 배치 & 표시 상태
+        if (deadZone != null && player != null)
+        {
+            // 뒤쪽(Behind) = -Fwd 방향으로 deadGap만큼
+            deadZone.position = player.position - Fwd * deadGap;
+        }
+
+        if (goal != null)
+        {
+            if (hideGoalBeforeAppear)
+            {
+                goal.gameObject.SetActive(false);
+            }
+            else
+            {
+                goal.gameObject.SetActive(true);
+                // 시작부터 보이게 할 경우 플레이어 앞에 최소 가시거리로 위치
+                goal.position = player.position + Fwd * goalVisibleAhead;
+            }
+        }
+    }
+    // ===============================================
+
+    private void Awake()
+    {
+        if (Instance == null) { Instance = this; }
+        else if (Instance != this) { Destroy(gameObject); return; }
+        // DontDestroyOnLoad를 원하면 주석 해제
+        // DontDestroyOnLoad(gameObject);
+    }
 
     void Start()
     {
         deadGap = Mathf.Max(0f, initialDeadGap);
 
-        if (goal)
+        if (goal != null && hideGoalBeforeAppear)
         {
-            if (hideGoalBeforeAppear) goal.gameObject.SetActive(false);
+            goal.gameObject.SetActive(false);
         }
 
         // 시작 위치 정렬(선택)
-        if (deadZone && player)
+        if (deadZone != null && player != null)
         {
-            // 뒤쪽(Behind) = -Fwd 방향으로 deadGap만큼
             deadZone.position = player.position - Fwd * deadGap;
         }
     }
@@ -87,9 +174,12 @@ public class LevelProgressManager3D : MonoBehaviour
             return;
         }
 
-        if (finished || dead) return;
+        if (finished || Player_Control.Instance.IsDead)
+        {
+            return;
+        }
 
-        float curSpeed = CurrentSpeed;            // ★ 여기만 바꾸면 됨
+        float curSpeed = CurrentSpeed;
         float dz = curSpeed * Time.deltaTime;
         distanceTraveled += dz;
 
@@ -103,29 +193,36 @@ public class LevelProgressManager3D : MonoBehaviour
 
         // 4) 데드존-플레이어 간격 업데이트(추격/이탈)
         if (curSpeed > deadZoneSpeed)
+        {
             deadGap += (curSpeed - deadZoneSpeed) * Time.deltaTime; // 점점 멀어짐(안전)
+        }
         else if (curSpeed < deadZoneSpeed)
+        {
             deadGap -= (deadZoneSpeed - curSpeed) * Time.deltaTime; // 따라붙음(위험)
+        }
 
         // 5) 데드존 접촉(즉사)
         if (deadGap <= 0f)
         {
-            dead = true;
             OnDeadZoneHit();
             return;
         }
 
         // 6) 데드존 위치 갱신(뒤쪽)
-        if (deadZone && player)
+        if (deadZone != null && player != null)
+        {
             deadZone.position = player.position - Fwd * deadGap;
+        }
 
         // 7) 결승선 등장/위치 갱신(앞쪽)
         float t = Mathf.Clamp01(distanceTraveled / targetDistance);
-        if (goal)
+        if (goal != null)
         {
             // 등장
             if (!goal.gameObject.activeSelf && t >= goalAppearAt)
+            {
                 goal.gameObject.SetActive(true);
+            }
 
             if (goal.gameObject.activeSelf)
             {
@@ -136,7 +233,10 @@ public class LevelProgressManager3D : MonoBehaviour
                 float aheadDist = Mathf.Max(goalVisibleAhead, remain);
 
                 // 플레이어 앞(+Fwd)으로 배치
-                goal.position = player.position + Fwd * aheadDist;
+                if (player != null)
+                {
+                    goal.position = player.position + Fwd * aheadDist;
+                }
             }
         }
     }
@@ -147,8 +247,8 @@ public class LevelProgressManager3D : MonoBehaviour
     /// </summary>
     public void AddDistance(float extra)
     {
-        if (finished || dead) return;
-        if (extra <= 0f) return;
+        if (finished || Player_Control.Instance.IsDead) { return; }
+        if (extra <= 0f) { return; }
 
         distanceTraveled += extra;
         deadGap += extra; // 플레이어가 앞으로 확 당기면 데드존과 간격도 벌어짐
@@ -162,35 +262,34 @@ public class LevelProgressManager3D : MonoBehaviour
         }
 
         // 결승선 등장 조건 재평가
-        if (goal && hideGoalBeforeAppear)
+        if (goal != null && hideGoalBeforeAppear)
         {
             float t = Mathf.Clamp01(distanceTraveled / targetDistance);
             if (!goal.gameObject.activeSelf && t >= goalAppearAt)
+            {
                 goal.gameObject.SetActive(true);
+            }
         }
     }
 
     void OnFinishReached()
     {
-        // 월드/맵 정지 등 연출
         Debug.Log("[LevelProgress] FINISH!");
-        // 예시: MapController.SetWorldSpeed(0f);
-        // 예시: UI_Control.instance.FinishGame();
+        GameStateMachine.Instance.OnStageResult(true);
     }
 
     void OnDeadZoneHit()
     {
         Debug.Log("[LevelProgress] DEAD by DeadZone");
         // 즉사 처리
-        // 예시: UI_Control.instance.FinishGame();
-        // 또는 Player_Control.Instance.HitPlayer(9999f);
+        Player_Control.Instance.CurrentHP = 0f;
     }
 
     // 디버그용 가시선
 #if UNITY_EDITOR
     void OnDrawGizmosSelected()
     {
-        if (!player) return;
+        if (player == null) { return; }
         var f = (movementDir.sqrMagnitude > 1e-6f) ? movementDir.normalized : Vector3.forward;
 
         Gizmos.color = Color.red;   // DeadZone 예상선

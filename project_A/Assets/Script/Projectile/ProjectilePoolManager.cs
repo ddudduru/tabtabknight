@@ -31,6 +31,7 @@ public class ProjectilePoolManager : MonoBehaviour
         {
             prj = Instantiate(projectilePrefab);
             prj.Init(ReturnToPool);
+            prj.tag = "Projectile";
         }
         return prj;
     }

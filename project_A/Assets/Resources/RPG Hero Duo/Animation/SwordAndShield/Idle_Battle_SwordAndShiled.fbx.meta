@@ -1,7 +1,14 @@
 fileFormatVersion: 2
 guid: 0308cf4e83cf517488b60af58b290fe0
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228701
+  packageName: RPG Tiny Hero Wave PBR
+  packageVersion: 1.0
+  assetPath: Assets/RPG Hero Duo/Animation/SwordAndShield/Idle_Battle_SwordAndShiled.fbx
+  uploadId: 747417
 ModelImporter:
-  serializedVersion: 19301
+  serializedVersion: 24200
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
@@ -17,9 +24,8 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -169,27 +175,38 @@ ModelImporter:
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
+    importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
     fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
+    optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -481,14 +498,19 @@ ModelImporter:
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-    - name: Hair01
+    - name: Body05
       parentName: Idle_Battle_SwordAndShiled(Clone)
-      position: {x: 5.5542004e-16, y: 0.9141078, z: 0.012847028}
-      rotation: {x: -0.5, y: 0.5, z: -0.5, w: 0.5}
+      position: {x: -0, y: 0.45777598, z: -0.45902124}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Eye01
       parentName: Idle_Battle_SwordAndShiled(Clone)
       position: {x: 2.7120293e-16, y: 0.9141078, z: 0.012847028}
+      rotation: {x: -0.5, y: 0.5, z: -0.5, w: 0.5}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hair01
+      parentName: Idle_Battle_SwordAndShiled(Clone)
+      position: {x: 5.5542004e-16, y: 0.9141078, z: 0.012847028}
       rotation: {x: -0.5, y: 0.5, z: -0.5, w: 0.5}
       scale: {x: 1, y: 1, z: 1}
     - name: Head01_Male
@@ -501,16 +523,6 @@ ModelImporter:
       position: {x: 5.5542004e-16, y: 0.9141078, z: 0.012847028}
       rotation: {x: -0.5, y: 0.5, z: -0.5, w: 0.5}
       scale: {x: 1, y: 1, z: 1}
-    - name: Body05
-      parentName: Idle_Battle_SwordAndShiled(Clone)
-      position: {x: -0, y: 0.45777598, z: -0.45902124}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Cloak02
-      parentName: Idle_Battle_SwordAndShiled(Clone)
-      position: {x: -0, y: 0.5790208, z: -0.81771773}
-      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-      scale: {x: 1, y: 1, z: 1}
     - name: root
       parentName: Idle_Battle_SwordAndShiled(Clone)
       position: {x: -0, y: 0, z: 0}
@@ -521,26 +533,6 @@ ModelImporter:
       position: {x: -1.0845211e-17, y: 0.00007575201, z: 0.32165092}
       rotation: {x: 0.062176764, y: 0.7043679, z: -0.062176853, w: 0.7043679}
       scale: {x: 1.0000018, y: 1.0000011, z: 1.0000014}
-    - name: thigh_l
-      parentName: pelvis
-      position: {x: 0.029832672, y: -0.0141515955, z: -0.09502096}
-      rotation: {x: -0.036186893, y: 0.03976303, z: -0.002768956, w: 0.9985498}
-      scale: {x: 1.0000007, y: 1.0000006, z: 1.0000004}
-    - name: calf_l
-      parentName: thigh_l
-      position: {x: 0.1377729, y: -0.0059484076, z: -0.0027491562}
-      rotation: {x: 0.02691302, y: -0.022706516, z: 0.0010662572, w: -0.99937934}
-      scale: {x: 1.0000007, y: 1.0000001, z: 0.99999994}
-    - name: foot_l
-      parentName: calf_l
-      position: {x: 0.12562445, y: 0.012257197, z: 0.002024065}
-      rotation: {x: -0.025008963, y: -0.0624419, z: 0.0012533205, w: 0.9977344}
-      scale: {x: 1.0000008, y: 1.0000015, z: 1.0000015}
-    - name: ball_l
-      parentName: foot_l
-      position: {x: 0.020222384, y: -0.10951788, z: -0.0015459505}
-      rotation: {x: -0.00000006146728, y: -0.000000048428767, z: -0.7071068, w: -0.7071068}
-      scale: {x: 1.0000011, y: 0.9999998, z: 1.0000013}
     - name: spine_01
       parentName: pelvis
       position: {x: -0.09894391, y: -0.01896602, z: 0.0033746792}
@@ -556,25 +548,25 @@ ModelImporter:
       position: {x: -0.09346745, y: 8.8817837e-17, z: 6.418694e-17}
       rotation: {x: -0.000000011051662, y: -0.000000081724345, z: 0.042781133, w: 0.9990845}
       scale: {x: 1.0000001, y: 1.0000006, z: 0.99999994}
-    - name: neck_01
+    - name: BackpackBone
       parentName: spine_03
-      position: {x: -0.07696576, y: -1.5099033e-16, z: 1.13396255e-17}
-      rotation: {x: 0.000000013483575, y: 0.000000017281502, z: -0.087512165, w: -0.9961635}
-      scale: {x: 1.0000019, y: 1.0000018, z: 1.0000014}
-    - name: head
-      parentName: neck_01
-      position: {x: -0.20523393, y: -3.5527136e-17, z: 1.09031954e-16}
-      rotation: {x: -0.000000025381734, y: -0.000000052992352, z: 0.045955647, w: -0.99894345}
-      scale: {x: 1.0000007, y: 1.0000011, z: 1.0000013}
+      position: {x: -0.05273138, y: 0.21801382, z: -1.2915617e-16}
+      rotation: {x: -0.02944411, y: 0.7064935, z: -0.029444126, w: -0.7064935}
+      scale: {x: 1.0000006, y: 1.0000011, z: 1.0000013}
     - name: clavicle_l
       parentName: spine_03
       position: {x: -0.01944315, y: -0.021992614, z: -0.062890135}
       rotation: {x: -0.10418874, y: 0.7700338, z: 0.0322023, w: -0.6286141}
       scale: {x: 1.0000005, y: 1.0000021, z: 1.0000014}
+    - name: shoulderPadJoint_l
+      parentName: clavicle_l
+      position: {x: -0.10172261, y: 0.0000031123172, z: 0.000054128275}
+      rotation: {x: -0.009676, y: 0.10392798, z: 0.09219542, w: 0.99025524}
+      scale: {x: 1.0000008, y: 1.0000015, z: 1.0000021}
     - name: upperarm_l
       parentName: clavicle_l
       position: {x: -0.10173372, y: 4.440892e-18, z: -1.4210854e-16}
-      rotation: {x: -0.011902688, y: 0.10369653, z: 0.070935935, w: 0.99200475}
+      rotation: {x: -0.011902689, y: 0.10369654, z: 0.07093594, w: 0.9920048}
       scale: {x: 1.0000002, y: 1.0000017, z: 1.0000025}
     - name: lowerarm_l
       parentName: upperarm_l
@@ -594,7 +586,7 @@ ModelImporter:
     - name: index_02_l
       parentName: index_01_l
       position: {x: -0.084993236, y: -2.842171e-16, z: -2.8366196e-16}
-      rotation: {x: 0.000005745178, y: -0.0034163173, z: -0.040483348, w: 0.99917436}
+      rotation: {x: 0.0000057451784, y: -0.0034163175, z: -0.04048335, w: 0.9991744}
       scale: {x: 1.0000007, y: 1.0000042, z: 1.0000045}
     - name: index_03_l
       parentName: index_02_l
@@ -614,43 +606,23 @@ ModelImporter:
     - name: thumb_03_l
       parentName: thumb_02_l
       position: {x: -0.045099992, y: 1.7763568e-17, z: -1.4210854e-16}
-      rotation: {x: -0.012497648, y: -0.0024275442, z: -0.071094766, w: 0.9973884}
+      rotation: {x: -0.012497644, y: -0.0024275442, z: -0.07109475, w: 0.9973884}
       scale: {x: 1.0000021, y: 0.99999994, z: 1.0000017}
     - name: weapon_l
       parentName: hand_l
       position: {x: -0.094, y: 0.0069999998, z: 0.004}
       rotation: {x: -0.7071067, y: 0.0000000018626445, z: 0.00000002833446, w: -0.7071068}
       scale: {x: 1.0000005, y: 1.0000007, z: 1.0000005}
-    - name: shoulderPadJoint_l
-      parentName: clavicle_l
-      position: {x: -0.10172261, y: 0.0000031123172, z: 0.000054128275}
-      rotation: {x: -0.009676, y: 0.10392798, z: 0.09219542, w: 0.99025524}
-      scale: {x: 1.0000008, y: 1.0000015, z: 1.0000021}
-    - name: CloakBone01
-      parentName: spine_03
-      position: {x: -0.07525502, y: 0.1138894, z: -1.3765184e-16}
-      rotation: {x: -0.19011138, y: 0.9817625, z: -0.000000034166476, w: -0.00000002543333}
-      scale: {x: 1.0000001, y: 1.0000014, z: 1.000001}
-    - name: CloakBone02
-      parentName: CloakBone01
-      position: {x: -0.2614295, y: 2.6645352e-17, z: -5.804901e-17}
-      rotation: {x: -0.000000022111164, y: -0.000000037080298, z: 0.09271763, w: 0.9956925}
-      scale: {x: 1.0000005, y: 0.9999998, z: 0.9999997}
-    - name: CloakBone03
-      parentName: CloakBone02
-      position: {x: -0.30492613, y: -1.0658141e-16, z: -7.123106e-17}
-      rotation: {x: -0.000000019613275, y: 0.00000004588284, z: 0.0567417, w: 0.99838895}
-      scale: {x: 1.0000001, y: 0.99999934, z: 0.99999946}
-    - name: BackpackBone
-      parentName: spine_03
-      position: {x: -0.05273138, y: 0.21801382, z: -1.2915617e-16}
-      rotation: {x: -0.02944411, y: 0.7064935, z: -0.029444126, w: -0.7064935}
-      scale: {x: 1.0000006, y: 1.0000011, z: 1.0000013}
     - name: clavicle_r
       parentName: spine_03
       position: {x: -0.01944353, y: -0.021992618, z: 0.0628901}
       rotation: {x: -0.7700337, y: -0.104188755, z: -0.6286142, w: -0.032202322}
       scale: {x: 1.0000011, y: 1.0000011, z: 1.0000007}
+    - name: shoulderPadJoint_r
+      parentName: clavicle_r
+      position: {x: 0.10172303, y: -0.0000030092533, z: -0.000053583713}
+      rotation: {x: -0.99025524, y: -0.09219543, z: 0.10392789, w: -0.009675993}
+      scale: {x: 1.0000001, y: 1.000002, z: 1.0000015}
     - name: upperarm_r
       parentName: clavicle_r
       position: {x: 0.10173414, y: 0.000000103064025, z: 0.000000544563}
@@ -684,7 +656,7 @@ ModelImporter:
     - name: thumb_01_r
       parentName: hand_r
       position: {x: 0.062028997, y: -0.025731001, z: 0.046623457}
-      rotation: {x: 0.50245965, y: -0.36258844, z: 0.14099674, w: 0.77212954}
+      rotation: {x: 0.5024597, y: -0.36258844, z: 0.14099675, w: 0.7721295}
       scale: {x: 1.0000006, y: 1, z: 1.0000012}
     - name: thumb_02_r
       parentName: thumb_01_r
@@ -699,13 +671,53 @@ ModelImporter:
     - name: weapon_r
       parentName: hand_r
       position: {x: 0.09399239, y: -0.0072682807, z: -0.00360484}
-      rotation: {x: 0.70710677, y: 0.000000013038514, z: -0.0000000035533598, w: 0.70710695}
+      rotation: {x: 0.7071067, y: 0.0000000130385125, z: -0.0000000035533594, w: 0.7071069}
       scale: {x: 1.0000002, y: 1.0000006, z: 1.0000007}
-    - name: shoulderPadJoint_r
-      parentName: clavicle_r
-      position: {x: 0.10172303, y: -0.0000030092533, z: -0.000053583713}
-      rotation: {x: -0.99025524, y: -0.09219543, z: 0.10392789, w: -0.009675993}
-      scale: {x: 1.0000001, y: 1.000002, z: 1.0000015}
+    - name: CloakBone01
+      parentName: spine_03
+      position: {x: -0.07525502, y: 0.1138894, z: -1.3765184e-16}
+      rotation: {x: -0.19011138, y: 0.9817625, z: -0.000000034166476, w: -0.00000002543333}
+      scale: {x: 1.0000001, y: 1.0000014, z: 1.000001}
+    - name: CloakBone02
+      parentName: CloakBone01
+      position: {x: -0.2614295, y: 2.6645352e-17, z: -5.804901e-17}
+      rotation: {x: -0.000000022111164, y: -0.000000037080298, z: 0.09271763, w: 0.9956925}
+      scale: {x: 1.0000005, y: 0.9999998, z: 0.9999997}
+    - name: CloakBone03
+      parentName: CloakBone02
+      position: {x: -0.30492613, y: -1.0658141e-16, z: -7.123106e-17}
+      rotation: {x: -0.000000019613275, y: 0.00000004588284, z: 0.0567417, w: 0.99838895}
+      scale: {x: 1.0000001, y: 0.99999934, z: 0.99999946}
+    - name: neck_01
+      parentName: spine_03
+      position: {x: -0.07696576, y: -1.5099033e-16, z: 1.13396255e-17}
+      rotation: {x: 0.000000013483575, y: 0.000000017281502, z: -0.087512165, w: -0.9961635}
+      scale: {x: 1.0000019, y: 1.0000018, z: 1.0000014}
+    - name: head
+      parentName: neck_01
+      position: {x: -0.20523393, y: -3.5527136e-17, z: 1.09031954e-16}
+      rotation: {x: 0.030988041, y: -0.026491493, z: -0.0065597575, w: -0.9991471}
+      scale: {x: 1.0000007, y: 1.0000011, z: 1.0000013}
+    - name: thigh_l
+      parentName: pelvis
+      position: {x: 0.029832672, y: -0.0141515955, z: -0.09502096}
+      rotation: {x: -0.036186893, y: 0.03976303, z: -0.002768956, w: 0.9985498}
+      scale: {x: 1.0000007, y: 1.0000006, z: 1.0000004}
+    - name: calf_l
+      parentName: thigh_l
+      position: {x: 0.1377729, y: -0.0059484076, z: -0.0027491562}
+      rotation: {x: 0.02691302, y: -0.022706516, z: 0.0010662572, w: -0.99937934}
+      scale: {x: 1.0000007, y: 1.0000001, z: 0.99999994}
+    - name: foot_l
+      parentName: calf_l
+      position: {x: 0.12562445, y: 0.012257197, z: 0.002024065}
+      rotation: {x: -0.025008967, y: -0.0624419, z: 0.0012533207, w: 0.9977344}
+      scale: {x: 1.0000008, y: 1.0000015, z: 1.0000015}
+    - name: ball_l
+      parentName: foot_l
+      position: {x: 0.020222384, y: -0.10951788, z: -0.0015459505}
+      rotation: {x: -0.00000006146728, y: -0.000000048428767, z: -0.7071068, w: -0.7071068}
+      scale: {x: 1.0000011, y: 0.9999998, z: 1.0000013}
     - name: thigh_r
       parentName: pelvis
       position: {x: 0.02983256, y: 0.019493982, z: 0.094070405}
@@ -714,7 +726,7 @@ ModelImporter:
     - name: calf_r
       parentName: thigh_r
       position: {x: -0.13777272, y: 0.0059483806, z: 0.0027488763}
-      rotation: {x: -0.026912972, y: 0.022706501, z: -0.0010662051, w: 0.9993793}
+      rotation: {x: -0.026912974, y: 0.022706503, z: -0.0010662052, w: 0.99937934}
       scale: {x: 1.0000015, y: 1.0000001, z: 1.0000001}
     - name: foot_r
       parentName: calf_r
@@ -724,7 +736,7 @@ ModelImporter:
     - name: ball_r
       parentName: foot_r
       position: {x: -0.020222299, y: 0.109517895, z: 0.0015459999}
-      rotation: {x: -0.00000007823109, y: -0.0000000372529, z: 0.70710677, w: 0.70710695}
+      rotation: {x: -0.00000007823108, y: -0.000000037252896, z: 0.7071067, w: 0.7071069}
       scale: {x: 1.0000015, y: 1.000005, z: 1.0000027}
     armTwist: 0.5
     foreArmTwist: 0.5
@@ -743,14 +755,10 @@ ModelImporter:
   animationType: 3
   humanoidOversampling: 1
   avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 228701
-  packageName: RPG Tiny Hero Wave PBR
-  packageVersion: 1.0
-  assetPath: Assets/RPG Hero Duo/Animation/SwordAndShield/Idle_Battle_SwordAndShiled.fbx
-  uploadId: 747417
