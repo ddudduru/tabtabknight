@@ -21,7 +21,7 @@ public class WormBrain : IEnemyBrain
     private float fireAngle = 55f;     // 전방 기준 사격 허용 각도
     private bool requireLOS = true;    // 단순 시야(레이) 체크
 
-    private float fireCooldown = 1f;   // 한 발 쏘고 다음 발까지 대기
+    private float fireCooldown = 2f;   // 한 발 쏘고 다음 발까지 대기
     private float fireTimer = 0f;
 
     // ===== 연출/히트박스 =====
@@ -33,7 +33,7 @@ public class WormBrain : IEnemyBrain
     // ===== 투사체 =====
     private float projSpeed = 10f;
     private float projLife = 3.5f;
-    private float projDizzyOnHit = 2.5f; // 플레이어 피격 시 어지럼 증가량
+    private float projDizzyOnHit = 1f; // 플레이어 피격 시 어지럼 증가량
     private float muzzleYOffset = 0.7f; // 총구 높이
 
     private State state;
@@ -215,11 +215,11 @@ public class WormBrain : IEnemyBrain
             baseDir = new Vector3(owner.transform.forward.x, 0f, owner.transform.forward.z).normalized;
 
         // 2) 3갈래 샷 각도(도): 중앙 0°, 좌/우 ±branchDeg
-        const float branchDeg = 15f;     // 좌우 벌어짐 각도
+        const float branchDeg = 10f;     // 좌우 벌어짐 각도
         const float jitterDeg = 2f;      // 전체 군집에 살짝 랜덤(선택)
         float baseJitter = Random.Range(-jitterDeg, jitterDeg);
 
-        float[] angles = { 0f, -branchDeg, +branchDeg };
+        float[] angles = {-branchDeg, +branchDeg };
 
         Vector3 muzzle = owner.transform.position + Vector3.up * muzzleYOffset;
 

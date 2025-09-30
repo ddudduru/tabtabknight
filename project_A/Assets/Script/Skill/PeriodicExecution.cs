@@ -48,7 +48,7 @@ public class PeriodicExecution : IExecutionStrategy
 
         while (elapsed < duration)
         {
-            UI_Control.instance.UpdateSkillTime(duration - elapsed, duration);
+            player.WorldUI.UpdateSkillTime(duration - elapsed, duration);
             if (player.IsDizzy)
             {
                 break;
@@ -70,7 +70,7 @@ public class PeriodicExecution : IExecutionStrategy
 
         // 종료 직전 클린업
         effect.End(owner);
-        UI_Control.instance.UpdateSkillTime(0f, duration);
+        player.WorldUI.UpdateSkillTime(0f, duration);
 
         // 파라미터 리셋
         var anim = owner.GetComponent<Animator>();

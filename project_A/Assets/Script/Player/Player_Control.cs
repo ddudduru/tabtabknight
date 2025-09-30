@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
+using NUnit.Framework.Constraints;
 
 public class Player_Control : MonoBehaviour
 {
@@ -15,6 +16,40 @@ public class Player_Control : MonoBehaviour
     [SerializeField] private ParticleSystem hitObstacleEffect;
     [SerializeField] private BoxCollider skillRange;
 
+    private PlayerWorldUI worldUI;
+
+    public PlayerWorldUI WorldUI
+    {
+        get
+        {
+            if (worldUI == null)
+            {
+                // 1) 자식에서 먼저 찾기
+                worldUI = GetComponentInChildren<PlayerWorldUI>();
+
+                // 2) 씬 전체에서 찾기 (fallback)
+                if (worldUI == null)
+                {
+                    worldUI = FindObjectOfType<PlayerWorldUI>();
+                }
+
+                // 3) 찾았다면 owner 세팅
+                if (worldUI != null)
+                {
+                    worldUI.SetOwner(this);
+                }
+            }
+            return worldUI;
+        }
+        set
+        {
+            worldUI = value;
+            if (worldUI != null)
+            {
+                worldUI.SetOwner(this);
+            }
+        }
+    }
     [Header("Movement / Stats")]
     [SerializeField] private float moveSpeed = 3f;
     [SerializeField] public float maxStamina = 100f;
@@ -141,7 +176,7 @@ public class Player_Control : MonoBehaviour
             rigidbodyComponent.isKinematic = false;
         }
 
-        UI_Control.instance.SetActivePlayerUI(true);
+        WorldUI.gameObject.SetActive(true);
     }
 
     public void Dead()
@@ -157,7 +192,7 @@ public class Player_Control : MonoBehaviour
         {
             rigidbodyComponent.isKinematic = true;
         }
-        UI_Control.instance.SetActivePlayerUI(false);
+        WorldUI.gameObject.SetActive(false);
         GameStateMachine.Instance.OnStageResult(false);
     }
 
@@ -330,7 +365,7 @@ public class Player_Control : MonoBehaviour
     private void EndSkill()
     {
         skillController.EndActiveSkill();
-        UI_Control.instance.EndSkillTime();
+        WorldUI.EndSkillTime();
         animator.SetBool("attack_rotate", false);
         skillRange.enabled = false;
     }

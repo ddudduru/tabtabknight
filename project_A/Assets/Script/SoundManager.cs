@@ -85,8 +85,15 @@ public class SoundManager : MonoBehaviour
     }
     public void Update()
     {
-        bgm_as.volume = bgm_slider.value;
-        sound_effect_as.volume = effect_slider.value;
+        if (bgm_as != null && bgm_slider!=null)
+        {
+            bgm_as.volume = bgm_slider.value;
+        }
+
+        if (sound_effect_as != null && effect_slider!=null)
+        {
+            sound_effect_as.volume = effect_slider.value;
+        }
     }
 
 

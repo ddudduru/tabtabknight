@@ -76,6 +76,7 @@ public class StartSequenceController : MonoBehaviour
     {
         if (cameraHome != null) { cameraHome.gameObject.SetActive(true); }
         if (cameraIngame != null) { cameraIngame.gameObject.SetActive(false); }
+
         Instance = this;
     }
 
@@ -136,7 +137,7 @@ public class StartSequenceController : MonoBehaviour
         // 홈 카메라 On, 인게임 Off
         if (cameraHome != null) { cameraHome.gameObject.SetActive(true); }
         if (cameraIngame != null) { cameraIngame.gameObject.SetActive(false); }
-
+        
         // 1) 현재 위치 -> Return 타겟까지 이동
         Vector3 p0 = playerStartTargetPosition;
         //player.position = p0;

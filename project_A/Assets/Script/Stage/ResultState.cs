@@ -1,4 +1,3 @@
-// ResultState.cs (full)
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,78 +7,33 @@ public class ResultState : IGameState
     private readonly GameStateMachine machine;
     private readonly bool isClear;
 
-    private GameObject resultUI;
-    private TextMeshProUGUI resultText;
-    private Button nextButton;
-    private Button retryButton;
-    private Button homeButton;
-
     public ResultState(GameStateMachine machine, bool isClear)
     {
         this.machine = machine;
         this.isClear = isClear;
-
-        // Hook UI (replace with serialized refs if you prefer)
-        resultUI = UI_Control.instance.resultUiPanel;
-        resultText = UI_Control.instance.resultText;
-        nextButton = UI_Control.instance.nextButton;
-        retryButton = UI_Control.instance.retryButton;
-        homeButton = UI_Control.instance.homeButton;
     }
 
     public void Enter()
     {
-        if (resultUI != null) { resultUI.SetActive(true); }
-        if (resultText != null)
+        // Build params for ResultUI and show it via UIManager
+        var p = new ResultUI.OpenParam
         {
-            resultText.text = isClear ? "Stage Clear!" : "Stage Failed";
-        }
+            Machine = machine,
+            IsClear = isClear,
+            Title = isClear ? "Stage Clear!" : "Stage Failed",
+            Score = string.Format("{0:#,0}", GameManager.instance.score)
+        };
 
-        if (nextButton != null)
-        {
-            // Next is only meaningful on clear
-            nextButton.gameObject.SetActive(isClear);
-            nextButton.onClick.AddListener(OnNextClicked);
-        }
-
-        if (retryButton != null)
-        {
-            retryButton.onClick.AddListener(OnRetryClicked);
-        }
-
-        if (homeButton != null)
-        {
-            homeButton.onClick.AddListener(OnHomeClicked);
-        }
+        UIManager.Instance.Show<ResultUI>(p);
     }
 
     public void Update()
     {
+        // usually no-op
     }
 
     public void Exit()
     {
-        if (resultUI != null) { resultUI.SetActive(false); }
-        if (nextButton != null) { nextButton.onClick.RemoveListener(OnNextClicked); }
-        if (retryButton != null) { retryButton.onClick.RemoveListener(OnRetryClicked); }
-        if (homeButton != null) { homeButton.onClick.RemoveListener(OnHomeClicked); }
-    }
-
-    private void OnNextClicked()
-    {
-        // Proceed to next stage (clear only)
-        machine.NextStageOrHome();
-    }
-
-    private void OnRetryClicked()
-    {
-        // Legacy behavior: immediate stage restart in place
-        machine.StartStage(machine.currentStageIndex);
-    }
-
-    private void OnHomeClicked()
-    {
-        // Always go Home
-        machine.GoHome();
+        UIManager.Instance.Hide<ResultUI>();
     }
 }
