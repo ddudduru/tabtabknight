@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 456adac4e8d673e4193e0faaa236e990, type: 3}
   m_Name: Chapter_2
   m_EditorClassIdentifier: Assembly-CSharp::ChapterDataSO
-  chapterId: 1
-  displayName: "\uCC55\uD1301"
-  description: "\uC804\uC124\uC758 \uC2DC\uC791"
+  chapterId: 2
+  displayName: "\uCC55\uD1302"
+  description: "\uC804\uC124\uC758 \uC2DC\uC7912"
   bgm: {fileID: 0}
   thumbnail: {fileID: 0}
   stages:

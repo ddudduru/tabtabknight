@@ -134,6 +134,7 @@ public class Player_Control : MonoBehaviour
     [SerializeField] private GameObject explosionVFXPrefab;
     [SerializeField] private GameObject areaAttackVFXPrefab;
 
+    public event System.Action OnDirectionToggled;
     public bool IsDizzy => isDizzy;
     public bool IsHit => isHit;
     public float DizzyAmount => dizzyTimer;
@@ -320,6 +321,7 @@ public class Player_Control : MonoBehaviour
     {
         moveDirection *= -1;
         currentAcceleration = initialAcceleration;
+        OnDirectionToggled?.Invoke(); // notify turn
     }
 
     #endregion
@@ -358,7 +360,7 @@ public class Player_Control : MonoBehaviour
         }
         else
         {
-            MapController.SetWorldSpeed(2f);
+            //MapController.SetWorldSpeed(2f);
         }
     }
 
@@ -390,7 +392,7 @@ private void HandleMovement()
     if (forwardActive > 0)
     {
         forwardActive -= Time.deltaTime;
-        MapController.SetWorldSpeed(3f);
+        //MapController.SetWorldSpeed(3f);
     }
 
     Vector3 lateralVelocity = new Vector3(moveDirection * currentAcceleration, 0f, 0f);

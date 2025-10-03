@@ -89,9 +89,28 @@ public class GameStateMachine : MonoBehaviour
         return chapterSet.GetChapterByIndex(currentChapterIndex);
     }
 
+    public ChapterDataSO GetChapter(int chapterID)
+    {
+        if (chapterSet == null)
+        {
+            return null;
+        }
+        return chapterSet.GetChapterByID(chapterID);
+    }
+
     public int GetStageCountInCurrentChapter()
     {
         var ch = CurrentChapter();
+        if (ch == null || ch.stages == null)
+        {
+            return 0;
+        }
+        return ch.stages.Length;
+    }
+
+    public int GetStageCountInChapter(int chapterID)
+    {
+        var ch = GetChapter(chapterID);
         if (ch == null || ch.stages == null)
         {
             return 0;
@@ -176,13 +195,66 @@ public class GameStateMachine : MonoBehaviour
                     _progress.maxChapterCleared0 = currentChapterIndex;
                 }
             }
-
+            // ★ 다음에 시작할 커서를 미리 갱신
+            AdvanceCursorAfterClear();
             LocalProgressStorage.Save(_progress);
         }
 
         ChangeState(new ResultState(this, isClear));
     }
+    private void AdvanceCursorAfterClear()
+    {
+        int stageCount = GetStageCountInCurrentChapter();
 
+        if (currentStageIndex >= stageCount - 1)
+        {
+            int nextChapter = currentChapterIndex + 1;
+            if (TryGetStageCountInChapter(nextChapter, out int nextChapterStageCount) && nextChapterStageCount > 0)
+            {
+                currentChapterIndex = nextChapter;
+                currentStageIndex = 0;
+            }
+            else
+            {
+                // No more chapters: clamp to last valid stage
+                currentStageIndex = Mathf.Max(0, stageCount - 1);
+            }
+        }
+        else
+        {
+            currentStageIndex += 1;
+        }
+
+        // write cursor to progress
+        _progress.chapterIndex0 = currentChapterIndex;
+        _progress.stageIndex0 = currentStageIndex;
+    }
+
+    /// <summary>
+    /// Safe query for stage count of a given chapter index.
+    /// </summary>
+    private bool TryGetStageCountInChapter(int chapterIndex, out int count)
+    {
+        count = 0;
+        if (chapterIndex < 0) { return false; }
+
+        // You likely already have data to get counts; wire it here.
+        // If you already have GetStageCountInCurrentChapter(), implement the by-index version similarly.
+        // Example:
+        // count = chapterSet.chapters[chapterIndex].stages.Count;
+        // return chapterIndex >= 0 && chapterIndex < chapterSet.chapters.Count;
+
+        // Placeholder: if you have a method, replace below.
+        try
+        {
+            count = GetStageCountInChapter(chapterIndex); // implement if missing
+            return count > 0;
+        }
+        catch
+        {
+            return false;
+        }
+    }
     public void NextStageOrHome()
     {
         int stageCount = GetStageCountInCurrentChapter();

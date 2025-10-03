@@ -13,6 +13,17 @@ MonoBehaviour:
   m_Name: Stage_4
   m_EditorClassIdentifier: Assembly-CSharp::StageMapDataSO
   combinedPatternJsons:
-  - {fileID: 4900000, guid: 8cef490bb01ba524c95f2cfd7b21ae48, type: 3}
-  - {fileID: 4900000, guid: 446ddd51d0503f54bb39bd13dacf51a6, type: 3}
-  initCombinedPatternJson: {fileID: 4900000, guid: 8cef490bb01ba524c95f2cfd7b21ae48, type: 3}
+  - {fileID: 4900000, guid: 98af22e8babc9f941b05a495c58b97d3, type: 3}
+  - {fileID: 4900000, guid: e0c2c4f18ede3c24480caecd57167389, type: 3}
+  - {fileID: 4900000, guid: 95c6363c459621342aac9fda965be311, type: 3}
+  - {fileID: 4900000, guid: f512690b959cbf74fbb1f3f5c639f3c6, type: 3}
+  initCombinedPatternJson: {fileID: 4900000, guid: 95c6363c459621342aac9fda965be311, type: 3}
+  resetMapPositionsOnEnter: 1
+  targetDistance: 300
+  baseMoveSpeed: 5
+  deadZoneSpeed: 4
+  goalAppearAt: 0.8
+  goalVisibleAhead: 6
+  initialDeadGap: 50
+  hideGoalBeforeAppear: 1
+  freezeWorldOnDizzy: 1
