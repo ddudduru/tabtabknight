@@ -207,7 +207,7 @@ public class NearMissBoostSystem : MonoBehaviour
         }
     }
 
-    private void ApplyWorldSpeed()
+    public void ApplyWorldSpeed()
     {
         if (player.IsDizzy)
         {

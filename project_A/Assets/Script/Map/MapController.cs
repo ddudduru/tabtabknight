@@ -31,7 +31,7 @@ public class MapController : MonoBehaviour
     [SerializeField] private LevelProgressManager3D progress;
 
     [Header("Runtime Control")]
-    [SerializeField] private bool isPaused = false;
+    [SerializeField] public bool isPaused = false;
 
     // Active stage patterns (SO-driven)
     private readonly List<CombinedMapData> activePatterns = new List<CombinedMapData>();

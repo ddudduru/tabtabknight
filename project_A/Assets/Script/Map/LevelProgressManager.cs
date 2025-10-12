@@ -69,6 +69,27 @@ public class LevelProgressManager3D : MonoBehaviour
     // 전진축 노멀
     Vector3 Fwd => (movementDir.sqrMagnitude > 1e-6f) ? movementDir.normalized : Vector3.forward;
 
+    public float TargetDistance => targetDistance;
+    public float GoalAppearAt => goalAppearAt;
+    public bool HideGoalBeforeAppear => hideGoalBeforeAppear;
+    public Transform PlayerTr => player;
+    public Transform DeadZoneTr => deadZone;
+    public Transform GoalTr => goal;
+    public Vector3 Forward => Fwd;
+    public float CurrentDeadGap
+    {
+        get
+        {
+            if (PlayerTr == null || DeadZoneTr == null)
+            {
+                return 0f;
+            }
+            Vector3 delta = PlayerTr.position - DeadZoneTr.position;
+            return Mathf.Max(0f, Vector3.Dot(delta, Forward));
+        }
+    }
+
+
     // ========== 새로 추가: 스테이지 리셋 API ==========
     /// <summary>
     /// 스테이지 시작/재시작/다음 스테이지 진입 시 호출.

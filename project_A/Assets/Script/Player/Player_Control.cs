@@ -13,7 +13,7 @@ public class Player_Control : MonoBehaviour
     [SerializeField] private Rigidbody rigidbodyComponent;
     [SerializeField] private Animator animator;
     [SerializeField] private BoxCollider attackRange;
-    [SerializeField] private ParticleSystem hitObstacleEffect;
+    [SerializeField] private ParticleSystem[] hitObstacleEffect;
     [SerializeField] private BoxCollider skillRange;
 
     private PlayerWorldUI worldUI;
@@ -293,6 +293,11 @@ public class Player_Control : MonoBehaviour
             else
             {
                 dizzyTimer = Mathf.Max(0f, dizzyTimer - 1f);
+
+                if (dizzyTimer <= 0)
+                {
+                    PlayHitEffect(false);
+                }
             }
         }
 
@@ -604,13 +609,27 @@ private void HandleMovement()
         /*SoundManager.instance.Play_SoundEffect(SoundManager.SoundType.Effect_Item_Get);
         DisplayScorePopup(scoreGain);*/
     }
+    private void PlayHitEffect(bool isPlay = true)
+    {
+        for (int i = 0; i < hitObstacleEffect.Length; i++)
+        {
+            if (isPlay)
+            {
+                hitObstacleEffect[i].Play();
+            }
+            else
+            {
+                hitObstacleEffect[i].Stop();
+            }
+        }
+    }
 
     public void HitObstacle(Obstacls_Control.Type type,float damage=10f)
     {
         if (isHit) return;
 
         isAttacking = false;
-        hitObstacleEffect.Play();
+        PlayHitEffect();
 
         float dizzyGain = 0f;
         switch (type)

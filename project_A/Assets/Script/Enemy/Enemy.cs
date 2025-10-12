@@ -36,6 +36,16 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+        if (!GameManager.instance.isStart)
+        {
+            return;
+        }
+
+        if (MapController.Instance.isPaused)
+        {
+            return;
+        }
+
         var baseDelta = new Vector3(0f, 0f, enemySpeed) * Time.deltaTime;
         var finalDelta = (brain != null)
             ? brain.ModifyMove(baseDelta, Time.deltaTime)

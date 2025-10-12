@@ -40,6 +40,8 @@ var data = machine.GetStageData0(stageIndex0);
     }
         // TODO: spawn/enable player & gameplay hooks
         Player_Control.Instance.InitPlayerSetting();
+        MapController.SetWorldSpeed(2f);
+        UIManager.Instance.Show<StageInUI>();
     }
 
     public void Update()
@@ -49,5 +51,6 @@ var data = machine.GetStageData0(stageIndex0);
     public void Exit()
     {
         // optional cleanup
+        UIManager.Instance.Hide<StageInUI>();
     }
 }

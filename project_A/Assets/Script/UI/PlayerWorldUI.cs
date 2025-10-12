@@ -24,6 +24,9 @@ public class PlayerWorldUI : MonoBehaviour
     [SerializeField] private GameObject dizzyPanel;
     [SerializeField] private TextMeshProUGUI dizzyText;
 
+    [Header("Speed")]
+    [SerializeField] private ParticleSystem speedUIEffect;
+
     // internal state
     private float targetSkillFill = 0f;
     private bool skillVisible = false;
